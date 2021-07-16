@@ -32,6 +32,8 @@ public class distenceArray {
                 //System.out.print(","+lon+",");
                 location[j] = new Location(lat, lon);
                 j++;
+                scanner.close();
+                scanner2.close();
             }
         } catch (IOException e) {
             e.printStackTrace();

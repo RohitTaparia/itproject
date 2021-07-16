@@ -20,6 +20,7 @@ public class PatientMapping {
                 latlong[j]=arr[1]+","+arr[2];
                 j++;
             }
+            br.close();
             String s=getlist.list(location);
             System.out.println(s);
         } catch (IOException e) {
