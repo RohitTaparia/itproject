@@ -1,5 +1,3 @@
-package Graded.ITproject;
-
 public class Hospital {
     private static final String[][] scans = {{"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}};
     private static final String[] depts = {"hbvmsdv","jhcvd","jdshcv","sjhcbjh","shdvsdv"};
