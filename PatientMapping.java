@@ -1,6 +1,3 @@
-package Graded.ITproject;
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -17,19 +14,19 @@ public class PatientMapping {
         while (myReader.hasNextLine()) {
             String line = myReader.nextLine();
             System.out.println(line);
-            String[] movieStr = line.split("\\|");
-            Hospital movie = new Hospital(Integer.parseInt(movieStr[0]),
-                    movieStr[1],
-                    Double.parseDouble(movieStr[2]),
-                    Double.parseDouble(movieStr[3]),
-                    Double.parseDouble(movieStr[4]),
-                    movieStr[5],
-                    movieStr[6],
-                    movieStr[7],
-                    Double.parseDouble(movieStr[8]),
-                    movieStr[9]);
+            String[] HspStr = line.split("\\|");
+            Hospital H1 = new Hospital(Integer.parseInt(HspStr[0]),
+                    HspStr[1],
+                    Double.parseDouble(HspStr[2]),
+                    Double.parseDouble(HspStr[3]),
+                    Double.parseDouble(HspStr[4]),
+                    HspStr[5],
+                    HspStr[6],
+                    HspStr[7],
+                    Double.parseDouble(HspStr[8]),
+                    HspStr[9]);
 
-            HspArrayLocal[i] = movie;
+            HspArrayLocal[i] = H1;
             i++;
             totalHospitals++;
         }
@@ -62,7 +59,7 @@ public class PatientMapping {
     public static void main(String[] args) throws FileNotFoundException {
         PatientMapping p1 = new PatientMapping();
         Location l1 = new Location(28.60539125203829, 77.05335471101368);
-        p1.HospitalBuilder("C:\\Users\\Praveen Raj HL\\Desktop/dummyIT.txt");
+        p1.HospitalBuilder("C:\\Users\\Durga Supriya HL\\Desktop/ITproject.txt");
         p1.recommend(l1, 10);
     }
 }
