@@ -1,5 +1,3 @@
-package Graded.ITproject;
-
 public class Hospital {
     private static final String[][] scans = {{"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}};
     private static final String[] depts = {"hbvmsdv", "jhcvd", "jdshcv", "sjhcbjh", "shdvsdv"};
@@ -87,7 +85,7 @@ public class Hospital {
 
     @Override
     public String toString() {
-        String[] revw = review.split(",");
+        String[] revw = review.split("\",");
         return "Hospital" + "\n" +
                 "ID=" + ID + "\n" +
                 "name='" + name + '\'' + "\n" +
@@ -97,7 +95,7 @@ public class Hospital {
                 "number='" + number + '\'' + "\n" +
                 "address='" + address + '\'' + "\n" +
                 "departments='" + departments + '\'' + "\n" +
-                "costPerRoom=" + costPerRoom + '\'' + "\n" +
-                "reviews=\n" + revw[0] + "\n" + revw[1] + "\n" + revw[2];
+                "costPerRoom=" + costPerRoom + "\n" +
+                "reviews=\n" + revw[0] + "\"" + "\n" + revw[1] + "\"" + "\n" + revw[2];
     }
 }
