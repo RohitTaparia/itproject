@@ -1,5 +1,3 @@
-package Graded.ITproject;
-
 public class Location {
     private final double x1;
     private final double y1;
