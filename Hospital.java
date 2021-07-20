@@ -1,6 +1,5 @@
 public class Hospital {
-    private static final String[][] scans = {{"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}, {"fg", "dg", "dfdf"}};
-    private static final String[] depts = {"hbvmsdv", "jhcvd", "jdshcv", "sjhcbjh", "shdvsdv"};
+
     private final int ID;
     private final String name;
     private final double latitude;
