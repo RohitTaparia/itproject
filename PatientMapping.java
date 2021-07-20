@@ -1,6 +1,3 @@
-package Graded.ITproject;
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -37,7 +34,7 @@ public class PatientMapping {
     }
 
     public Hospital[] recommend(Location l, int n) {
-        System.out.printf("\n\ntop %d nearest hospitals are:\n\n", n);
+        System.out.printf("\n\nTop %d nearest hospitals are:\n\n", n);
         Hospital temp;
         Hospital[] nearest = new Hospital[totalHospitals];
         for (int i = 0; i < totalHospitals; i++) {
@@ -99,10 +96,14 @@ public class PatientMapping {
 
     public static void main(String[] args) throws FileNotFoundException {
         PatientMapping p1 = new PatientMapping();
-        Location l1 = new Location(28.60539125203829, 77.05335471101368);
-        p1.HospitalBuilder("C:\\Users\\Praveen Raj HL\\Desktop/dummyIT.txt");
+        Location l1 = new Location(28.6052154684654, 77.2155121525);
+        p1.HospitalBuilder("C:\\Users\\Praveen Raj HL\\Desktop/Hospitals.txt");
         p1.recommend(l1, 10);
         p1.selectHsp(Integer.parseInt(args[0]));
+        for (int i= 0;i<p1.totalHospitals;i++){
+            System.out.println("--------------------------------------------------------------------");
+            System.out.println(p1.HspArray[i]);
+        }
 
 
     }
