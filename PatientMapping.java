@@ -7,7 +7,6 @@ public class PatientMapping {
     private Hospital[] HspArray;
     private int totalHospitals = 0;
 
-
     public void HospitalBuilder(String filename) throws FileNotFoundException {
         Hospital[] HspArrayLocal = new Hospital[10000];
         File myObj = new File(filename);
@@ -17,16 +16,9 @@ public class PatientMapping {
             String line = myReader.nextLine();
             System.out.println(line);
             String[] HspStr = line.split("\\|");
-            Hospital H1 = new Hospital(Integer.parseInt(HspStr[0]),
-                    HspStr[1],
-                    Double.parseDouble(HspStr[2]),
-                    Double.parseDouble(HspStr[3]),
-                    Double.parseDouble(HspStr[4]),
-                    HspStr[5],
-                    HspStr[6],
-                    HspStr[7],
-                    Double.parseDouble(HspStr[8]),
-                    HspStr[9]);
+            Hospital H1 = new Hospital(Integer.parseInt(HspStr[0]), HspStr[1], Double.parseDouble(HspStr[2]),
+                    Double.parseDouble(HspStr[3]), Double.parseDouble(HspStr[4]), HspStr[5], HspStr[6], HspStr[7],
+                    Double.parseDouble(HspStr[8]), HspStr[9]);
 
             HspArrayLocal[i] = H1;
             i++;
@@ -50,9 +42,11 @@ public class PatientMapping {
         }
         for (int i = 0; i < n; i++) {
             nearest[i] = HspArray[i];
-            System.out.println("Hospital " + (i + 1) + " " + HspArray[i].getName() + "  " + HspArray[i].getDistance(l) + "\n");
+            System.out.println(
+                    "Hospital " + (i + 1) + " " + HspArray[i].getName() + "  " + HspArray[i].getDistance(l) + "\n");
         }
-        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println(
+                "--------------------------------------------------------------------------------------------------------------------------------------------------------------");
         return nearest;
     }
 
@@ -108,8 +102,7 @@ public class PatientMapping {
 
                 String[] str = data.split("\\|");
 
-
-                String T = str[0];                      // Three parts of LabTest data type as in line above.
+                String T = str[0]; // Three parts of LabTest data type as in line above.
                 int G = Integer.parseInt(str[1]);
                 String D = str[2];
                 labArray[i] = new LabTests(T, G, D);
@@ -129,7 +122,8 @@ public class PatientMapping {
 
     }
 
-    public void labTestPerformed(LabTests[] labArray) {
+
+    public LabTests[] labTestPerformed(LabTests[] labArray) {
         int numOfTests;
         numOfTests = (int) (Math.random() * 11);
         ArrayList<Integer> labTestPerformedIndex = new ArrayList<>(numOfTests);
@@ -140,21 +134,32 @@ public class PatientMapping {
                 labTestPerformedIndex.add(num);
             }
         }
-
-        System.out.println("\nHE MEDICAL TESTS TO BE PERFORMED ON YOU\n");
+        LabTests[] tests = new LabTests[numOfTests];
+        System.out.println("\nTHE MEDICAL TESTS TO BE PERFORMED ON YOU\n");
         for (int i = 0; i < numOfTests; i++) {
-            System.out.println(labArray[labTestPerformedIndex.get(i)]);
+            System.out.println((i+1) +" "+labArray[labTestPerformedIndex.get(i)]);
+            tests[i] = labArray[labTestPerformedIndex.get(i)];
             System.out.println();
+        }
+        System.out.println("Enter # if you want to have tests: ");
+        Scanner scan1 = new Scanner(System.in);
+        String str = scan1.nextLine();
+        if(str != "#"){
+            return tests;
+        }else{
+            return null;
         }
     }
     
+
     public static void main(String[] args) throws FileNotFoundException {
-        
-//         Hospital - Recommend 10 hospitals. asks to select one of these. Displays all information about the selected hospital. 
-//         Displays the depts in that hospital and asks to select one of those.
+
+        // Hospital - Recommend 10 hospitals. asks to select one of these. Displays all
+        // information about the selected hospital.
+        // Displays the depts in that hospital and asks to select one of those.
         PatientMapping p1 = new PatientMapping();
         Location l1 = new Location(28.6052154684654, 77.2155121525);
-        p1.HospitalBuilder("C:\\Users\\Durga Supriya HL\\Desktop/Hospitals.txt");
+        p1.HospitalBuilder("itProject/data/Hospitals.txt");
         p1.recommend(l1, 10);
         Scanner myreader = new Scanner(System.in);
         System.out.println("Enter the Hospital number you chose: ");
@@ -163,19 +168,29 @@ public class PatientMapping {
         System.out.println("--------------------------------------------------------------------");
         System.out.println("The available departments in the chosen hospital are: ");
         String[] deps = p1.HspArray[indexHsp].getDepartments().split(",");
-        for (int i=0 ;i<deps.length;i++){
-            System.out.println("Department "+(i+1)+" "+deps[i]);
+        for (int i = 0; i < deps.length; i++) {
+            System.out.println("Department " + (i + 1) + " " + deps[i]);
         }
         System.out.println("Enter the index of preferred department: ");
         int indexDep = myreader.nextInt();
-        
-        
-//         Labtests
-        var arr =p1.labTestBuilder("src/data/LabTests.txt");
-        p1.labTestPerformed(arr);
 
+
+
+        // Labtests
+        var arr = p1.labTestBuilder("src/data/LabTests.txt");
+        var tests = p1.labTestPerformed(arr);
+        LabTests[] fine = new LabTests[100];
+        LabTests[] needsAttention = new LabTests[100];
+        for (int i = 0, j = 0, k = 0; i < tests.length; i++) {
+            if (tests[i].Result() == 1) {
+                fine[j] = tests[i];
+                j++;
+            } else {
+                needsAttention[k] = tests[i];
+                k++;
+            }
+        }
 
     }
-
 
 }

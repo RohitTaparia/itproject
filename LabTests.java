@@ -8,11 +8,11 @@ public class LabTests {
         this.cost = cost;
         this.defination = defination;
     }
-    public String Result(){
+    public int Result(){
         if(Math.random()<0.6){
-            return "Fine";
+            return 1;
         }else{
-            return "Need Attention";
+            return 0;
         }
     }
     public String toString(){
