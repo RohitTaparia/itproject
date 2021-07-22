@@ -147,14 +147,30 @@ public class PatientMapping {
             System.out.println();
         }
     }
-
-
+    
     public static void main(String[] args) throws FileNotFoundException {
+        
+//         Hospital - Recommend 10 hospitals. asks to select one of these. Displays all information about the selected hospital. 
+//         Displays the depts in that hospital and asks to select one of those.
         PatientMapping p1 = new PatientMapping();
-        Location l1 = new Location(28.60539125203829, 77.05335471101368);
-        p1.HospitalBuilder("src/data/Hospitals.txt");
+        Location l1 = new Location(28.6052154684654, 77.2155121525);
+        p1.HospitalBuilder("C:\\Users\\Durga Supriya HL\\Desktop/Hospitals.txt");
         p1.recommend(l1, 10);
-        p1.selectHsp(1);
+        Scanner myreader = new Scanner(System.in);
+        System.out.println("Enter the Hospital number you chose: ");
+        int indexHsp = myreader.nextInt();
+        p1.selectHsp(indexHsp);
+        System.out.println("--------------------------------------------------------------------");
+        System.out.println("The available departments in the chosen hospital are: ");
+        String[] deps = p1.HspArray[indexHsp].getDepartments().split(",");
+        for (int i=0 ;i<deps.length;i++){
+            System.out.println("Department "+(i+1)+" "+deps[i]);
+        }
+        System.out.println("Enter the index of preferred department: ");
+        int indexDep = myreader.nextInt();
+        
+        
+//         Labtests
         var arr =p1.labTestBuilder("src/data/LabTests.txt");
         p1.labTestPerformed(arr);
 
