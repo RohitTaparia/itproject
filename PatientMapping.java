@@ -1,10 +1,12 @@
-import java.io.File;
+import java.io.*;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PatientMapping {
     private Hospital[] HspArray;
     private int totalHospitals = 0;
+
 
     public void HospitalBuilder(String filename) throws FileNotFoundException {
         Hospital[] HspArrayLocal = new Hospital[10000];
@@ -34,7 +36,7 @@ public class PatientMapping {
     }
 
     public Hospital[] recommend(Location l, int n) {
-        System.out.printf("\n\nTop %d nearest hospitals are:\n\n", n);
+        System.out.printf("\n\ntop %d nearest hospitals are:\n\n", n);
         Hospital temp;
         Hospital[] nearest = new Hospital[totalHospitals];
         for (int i = 0; i < totalHospitals; i++) {
@@ -91,20 +93,73 @@ public class PatientMapping {
                 System.out.println("No choice was selected");
 
         }
+
+    }
+
+    public LabTests[] labTestBuilder(String fileName) {
+        LabTests[] labArray = new LabTests[1000];
+        File myObj = new File(fileName);
+        try {
+            Scanner myReader = new Scanner(myObj);
+            myReader.nextLine();
+            int i = 0;
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+
+                String[] str = data.split("\\|");
+
+
+                String T = str[0];                      // Three parts of LabTest data type as in line above.
+                int G = Integer.parseInt(str[1]);
+                String D = str[2];
+                labArray[i] = new LabTests(T, G, D);
+                i++;
+            }
+            int sizeOfArray = --i;
+            LabTests[] labArray2 = new LabTests[i];
+            for (int j = 0; j < sizeOfArray; j++) {
+                labArray2[j] = labArray[j];
+            }
+
+            return labArray2;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+    }
+
+    public void labTestPerformed(LabTests[] labArray) {
+        int numOfTests;
+        numOfTests = (int) (Math.random() * 11);
+        ArrayList<Integer> labTestPerformedIndex = new ArrayList<>(numOfTests);
+        while (labTestPerformedIndex.size() != numOfTests) {
+
+            int num = (int) (Math.random() * labArray.length);
+            if (!labTestPerformedIndex.contains(num)) {
+                labTestPerformedIndex.add(num);
+            }
+        }
+
+        System.out.println("\nHE MEDICAL TESTS TO BE PERFORMED ON YOU\n");
+        for (int i = 0; i < numOfTests; i++) {
+            System.out.println(labArray[labTestPerformedIndex.get(i)]);
+            System.out.println();
+        }
     }
 
 
     public static void main(String[] args) throws FileNotFoundException {
         PatientMapping p1 = new PatientMapping();
-        Location l1 = new Location(28.6052154684654, 77.2155121525);
-        p1.HospitalBuilder("C:\\Users\\Praveen Raj HL\\Desktop/Hospitals.txt");
+        Location l1 = new Location(28.60539125203829, 77.05335471101368);
+        p1.HospitalBuilder("src/data/Hospitals.txt");
         p1.recommend(l1, 10);
-        p1.selectHsp(Integer.parseInt(args[0]));
-        for (int i= 0;i<p1.totalHospitals;i++){
-            System.out.println("--------------------------------------------------------------------");
-            System.out.println(p1.HspArray[i]);
-        }
+        p1.selectHsp(1);
+        var arr =p1.labTestBuilder("src/data/LabTests.txt");
+        p1.labTestPerformed(arr);
 
 
     }
+
+
 }
