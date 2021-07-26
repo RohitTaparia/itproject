@@ -14,11 +14,18 @@ public class PatientMapping {
         int i = 0;
         while (myReader.hasNextLine()) {
             String line = myReader.nextLine();
-            System.out.println(line);
             String[] HspStr = line.split("\\|");
-            Hospital H1 = new Hospital(Integer.parseInt(HspStr[0]), HspStr[1], Double.parseDouble(HspStr[2]),
-                    Double.parseDouble(HspStr[3]), Double.parseDouble(HspStr[4]), HspStr[5], HspStr[6], HspStr[7],
-                    Double.parseDouble(HspStr[8]), HspStr[9]);
+            Hospital H1 = new Hospital(Integer.parseInt(HspStr[0]),
+                    HspStr[1],
+                    Double.parseDouble(HspStr[2]),
+                    Double.parseDouble(HspStr[3]),
+                    Double.parseDouble(HspStr[4]),
+                    HspStr[5],
+                    HspStr[6],
+                    HspStr[7],
+                    Double.parseDouble(HspStr[8]),
+                    HspStr[9],
+                    HspStr[10]);
 
             HspArrayLocal[i] = H1;
             i++;
