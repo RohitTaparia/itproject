@@ -79,15 +79,12 @@ public class Room {
 
         //closing the Scanner object
         sc.close();
-        System.out.println(oldLine);
         String newLine = oldLine + roomNo + "-";
-        System.out.println(newLine);
         //Replacing the old line with new line
         fileContents = fileContents.replace(oldLine, newLine);
         //instantiating the FileWriter class
         FileWriter writer = new FileWriter(filePath);
         System.out.println("");
-        System.out.println("new data: " + fileContents);
         writer.append(fileContents);
         writer.flush();
     }
