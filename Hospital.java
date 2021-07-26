@@ -1,5 +1,4 @@
 public class Hospital {
-
     private final int ID;
     private final String name;
     private final double latitude;
@@ -10,6 +9,7 @@ public class Hospital {
     private final String departments;
     private final double costPerRoom;
     private final String review;
+    private final String rooms;
 
     public static String[] getDepts() {
         return depts;
@@ -19,7 +19,7 @@ public class Hospital {
         return review;
     }
 
-    public Hospital(int ID, String name, double latitude, double longitude, double rating, String number, String address, String departments, double costPerRoom, String review) {
+    public Hospital(int ID, String name, double latitude, double longitude, double rating, String number, String address, String departments, double costPerRoom, String review, String rooms) {
         this.ID = ID;
         this.name = name;
         this.latitude = latitude;
@@ -30,6 +30,7 @@ public class Hospital {
         this.departments = departments;
         this.costPerRoom = costPerRoom;
         this.review = review;
+        this.rooms = rooms;
     }
 
     public static String[][] getScans() {
@@ -82,19 +83,27 @@ public class Hospital {
         return l2.distanceTo(l);
     }
 
+    public String getRooms() {
+        return rooms;
+    }
+
     @Override
     public String toString() {
         String[] revw = review.split("\",");
+        String[] rms = rooms.split("-");
         return "Hospital" + "\n" +
-                "ID=" + ID + "\n" +
-                "name='" + name + '\'' + "\n" +
-                "latitude=" + latitude + "\n" +
-                "longitude=" + longitude + "\n" +
-                "rating=" + rating + "\n" +
-                "number='" + number + '\'' + "\n" +
-                "address='" + address + '\'' + "\n" +
-                "departments='" + departments + '\'' + "\n" +
-                "costPerRoom=" + costPerRoom + "\n" +
-                "reviews=\n" + revw[0] + "\"" + "\n" + revw[1] + "\"" + "\n" + revw[2];
+                "ID= " + ID + "\n" +
+                "name= '" + name + '\'' + "\n" +
+                "latitude= " + latitude + "\n" +
+                "longitude= " + longitude + "\n" +
+                "rating= " + rating + "\n" +
+                "number= '" + number + '\'' + "\n" +
+                "address= '" + address + '\'' + "\n" +
+                "departments= '" + departments + '\'' + "\n" +
+                "costPerRoom= " + costPerRoom + "\n" +
+                "reviews=\n" + revw[0] + "\"" + "\n" + revw[1] + "\"" + "\n" + revw[2] + "\n" +
+                "number of rooms= " + rms[0] + "\n";
     }
+
 }
+
