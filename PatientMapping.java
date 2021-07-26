@@ -35,7 +35,7 @@ public class PatientMapping {
     }
 
     public Hospital[] recommend(Location l, int n) {
-        System.out.printf("\n\ntop %d nearest hospitals are:\n\n", n);
+        System.out.printf("\n\nNearest hospitals are:\n\n", n);
         Hospital temp;
         Hospital[] nearest = new Hospital[totalHospitals];
         for (int i = 0; i < totalHospitals; i++) {
@@ -47,13 +47,16 @@ public class PatientMapping {
                 }
             }
         }
-        for (int i = 0; i < n; i++) {
+        for (int i = 0, k = 0; (k < n) && (i < HspArray.length); i++) {
+            String[] rms = HspArray[i].getRooms().split("-");
+            if (rms.length == Integer.parseInt(rms[0]) + 1) {
+                continue;
+            }
+            k++;
             nearest[i] = HspArray[i];
-            System.out.println(
-                    "Hospital " + (i + 1) + " " + HspArray[i].getName() + "  " + HspArray[i].getDistance(l) + "\n");
+            System.out.println("Hospital " + (k) + " " + HspArray[i].getName() + "  " + HspArray[i].getDistance(l) + "\n");
         }
-        System.out.println(
-                "--------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------------------");
         return nearest;
     }
 
