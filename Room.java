@@ -1,5 +1,3 @@
-package Graded.ITproject;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -97,7 +95,7 @@ public class Room {
 
     public static void main(String[] args) throws IOException {
         Room r1 = new Room(21, "Rockland Hospital");
-        System.out.println(r1.generateRoom("C:\\Users\\Praveen Raj HL\\Desktop/ITproject.txt"));
+        System.out.println(r1.generateRoom("C:\\Users\\Durga Supriya HL\\Desktop/ITproject.txt"));
 
 
     }
