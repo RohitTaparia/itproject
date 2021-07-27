@@ -4,8 +4,17 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PatientMapping {
-    private Hospital[] HspArray;
+    private Hospital[] HspArray = new Hospital[10000];
     private int totalHospitals = 0;
+    private Doctor DoctorArr[] = new Doctor[1000];
+
+    public Hospital[] getHspArray() {
+        return HspArray;
+    }
+
+    public int getTotalHospitals() {
+        return totalHospitals;
+    }
 
     public void HospitalBuilder(String filename) throws FileNotFoundException {
         Hospital[] HspArrayLocal = new Hospital[10000];
@@ -14,6 +23,7 @@ public class PatientMapping {
         int i = 0;
         while (myReader.hasNextLine()) {
             String line = myReader.nextLine();
+//            System.out.println(line);
             String[] HspStr = line.split("\\|");
             Hospital H1 = new Hospital(Integer.parseInt(HspStr[0]),
                     HspStr[1],
@@ -34,7 +44,47 @@ public class PatientMapping {
         this.HspArray = HspArrayLocal;
     }
 
-    public Hospital[] recommend(Location l, int n) {
+    public void buildDoctor(String filename) {
+        File myObj = new File(filename);
+        Scanner myReader;
+        int i = 0;
+        try {
+            myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String line = myReader.nextLine();
+                System.out.println(line);
+
+                String[] parts = line.split(",");
+                Doctor D1 = new Doctor(Integer.parseInt(parts[0]),
+                        parts[1],
+                        parts[2],
+                        Double.parseDouble(parts[3]));
+
+                DoctorArr[i] = D1;
+                i++;
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Doctor[] getDoctorArr() {
+        return DoctorArr;
+    }
+
+    public int selectDoctor(int index, String dep, String File) {
+        this.buildDoctor(File);
+        for (int i = 1; i < DoctorArr.length; i++) {
+            if (DoctorArr[i].getHospitalID() == index && DoctorArr[i].getDept().equals(dep)) {
+                DoctorArr[i].toString();
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    public Hospital[] recommend(Location l, int n, String File) throws FileNotFoundException {
+        this.HospitalBuilder(File);
         System.out.printf("\n\nNearest hospitals are:\n\n", n);
         Hospital temp;
         Hospital[] nearest = new Hospital[totalHospitals];
@@ -97,7 +147,6 @@ public class PatientMapping {
                 System.out.println("No choice was selected");
 
         }
-
     }
 
     public LabTests[] labTestBuilder(String fileName) {
@@ -167,14 +216,18 @@ public class PatientMapping {
         // Hospital - Recommend 10 hospitals. asks to select one of these. Displays all
         // information about the selected hospital.
         // Displays the depts in that hospital and asks to select one of those.
-        PatientMapping p1 = new PatientMapping();
+       PatientMapping p1 = new PatientMapping();
         Location l1 = new Location(28.6052154684654, 77.2155121525);
-        p1.HospitalBuilder("itProject/data/Hospitals.txt");
-        p1.recommend(l1, 10);
+        p1.recommend(l1, 10,"C:\\Users\\Praveen Raj HL\\Desktop/Hospitals.txt");
         Scanner myreader = new Scanner(System.in);
         System.out.println("Enter the Hospital number you chose: ");
         int indexHsp = myreader.nextInt();
         p1.selectHsp(indexHsp);
+//        for (int i= 0;i<p1.totalHospitals;i++){
+//            System.out.println("--------------------------------------------------------------------");
+//            System.out.println(p1.HspArray[i]);
+//        }
+
         System.out.println("--------------------------------------------------------------------");
         System.out.println("The available departments in the chosen hospital are: ");
         String[] deps = p1.HspArray[indexHsp].getDepartments().split(",");
@@ -183,7 +236,7 @@ public class PatientMapping {
         }
         System.out.println("Enter the index of preferred department: ");
         int indexDep = myreader.nextInt();
-
+        p1.selectDoctor(indexHsp, deps[indexDep], "C:\\Users\\Praveen Raj HL\\Desktop/Doctors.txt");
 
 
         // Labtests
