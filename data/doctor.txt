@@ -1,0 +1,319 @@
+1,Dr. Shoyeb Aftab,Plastic surgery,550
+1,Dr. Akanksha Singh,Ophthalmology,750
+1,Dr. Tummala Snikitha,ENT,650
+1,Dr. Vineet Sharma,Neurosurgery,550
+1,Dr. Amrisha Khaitan,Cardiology,550
+1,Dr. Guthi Chaitanya Sindhu,General medicine,600
+1,Dr. Satwik Godara1,Radio-therapy,500
+1,Dr. Srijan R,Child health,500
+1,Dr. Karthik Reddy,Dermatology,650
+1,Dr. Matravadia Maanit,General Physicisian,600
+2,Dr. Rohit Venkatasimha Gollapudi,Plastic surgery,550
+2,Dr. Avikshit Gupta,Ophthalmology,750
+2,Dr. Prithvi Raj Sing,ENT,650
+2,Dr. Mansi Subba,Neurosurgery,550
+2,Dr. Kritika Priyadarshani,Cardiology,550
+2,Dr. Pullak Jain,General medicine,600
+2,Dr. Samananda Yumnam,Radio-therapy,500
+2,Dr. Aaranyak Debnath,Child health,500
+2,Dr. Sontosh Bormon,Dermatology,650
+2,Dr. Sibanuj Borkotok,General Physicisian,600
+3,Dr. Vivek Kumar,Plastic surgery,550
+3,Dr. Bhavya Sharma,Ophthalmology,750
+3,Dr. Jarubil Akanksha,ENT,650
+3,Dr. Soyeb Aftab,Neurosurgery,550
+3,Dr. Tanay Raj,Cardiology,550
+3,Dr. Saumya Shukla,General medicine,600
+3,Dr. Matravadia Maanit,Radio-therapy,500
+3,Dr. Jezreel Francis,Child health,500
+3,Dr. Yadav Rohit,Dermatology,650
+3,Dr. Zantye Ashish Avinash,General Physicisian,600
+4,Dr. Guthi Chaitanya Sindhu,Plastic surgery,550
+4,Dr. Karthik Reddy,Ophthalmology,750
+4,Dr. Ishita Garg,ENT,650
+4,Dr. Shaikh Rubiya Abdussal,Neurosurgery,550
+4,Dr. Mohammed Afroz Hussain K K,Cardiology,550
+4,Dr. Aysha S,General medicine,600
+4,Dr. Srijan R,Radio-therapy,500
+4,Dr. Chibhisha M,Child health,500
+4,Dr. Sneha Elizabeth Lal,Dermatology,650
+4,Dr. Tummala Snikitha,General Physicisian,600
+5,Dr. Murtaza Ali,Plastic surgery,550
+5,Dr. Gurkirat Singh,Ophthalmology,750
+5,Dr. Ashish Pant,ENT,650
+5,Dr. Akanskha Sing,Neurosurgery,550
+5,Dr. Vineet Sharma,Cardiology,550
+5,Dr. Abhiuday Pratap,General medicine,600
+5,Dr. NALIN KHANDELWAL,Radio-therapy,500
+5,Dr. BHAVIK BANSAL,Child health,500
+5,Dr. AKSHAT KAUSHIK,Dermatology,650
+5,Dr. SWASTIK BHATIA,General Physicisian,600
+6,Dr. ANANT JAIN,Cardiology,600
+6,Dr. BHAT SARTHAK RAGHAVENDRA,Cardiology,600
+6,Dr. MADHURI REDDY G,Cardiology,600
+6,Dr. DHRUV KUSHWAHA,Cardiology,600
+6,Dr. MIHIR RAI,Cardiology,600
+6,Dr. RAGHAV DUBEY,Diabetology,600
+6,Dr. HEMANT KHANDELIA,Diabetology,600
+6,Dr. SAMEER GODARA,Diabetology,600
+6,Dr. MOHIT Mal,Diabetology,600
+6,Dr. 38 RAVI MAKHIJA,Diabetology,600
+7,Dr. KIRTI AGRAWAL,Plastic surgery,550
+7,Dr. QURESHI ASRA,Ophthalmology,750
+7,Dr. RIDHAM AGARWAL,ENT,650
+7,Dr. HARSHVI NAYAN JOBANPUTRA,Neurosurgery,550
+7,Dr. ARUNANGSHU BHATTACHARYYA,Cardiology,550
+7,Dr. SATVIK LODHA,General medicine,600
+7,Dr. HARSH JAIN M,Radio-therapy,500
+7,Dr. HARDIK GUPTA,Child health,500
+7,Dr. ARYAN KAKKAR,Dermatology,650
+7,Dr. LALIT AGARWAL,General Physicisian,600
+8,Dr. DEEPENDRA SINGH CHOYAL,Cardiology,600
+8,Dr. RAGHAV,Cardiology,600
+8,Dr. PARTH GILL,Cardiology,600
+8,Dr. GAUTAM CHELLANI,Cardiology,600
+8,Dr. ATULL MANOJ,Cardiology,600
+8,Dr. HARSH AGARWAL,Cardiology,600
+8,Dr. HRUDYA LAKSHMI BOSE,Cardiology,600
+8,Dr. GAUTAM KUMAR,Cardiology,600
+8,Dr. ASWIN V P,Cardiology,600
+8,Dr. MANE SAIRAJ ANANDRAO,Cardiology,600
+9,Dr. ABHISHEK RAJPUT,Plastic surgery,550
+9,Dr. PHANEENDRA D R,Ophthalmology,750
+9,Dr. LOHITASHVA GOYAL,ENT,650
+9,Dr. VISHWA RAKESH,Neurosurgery,550
+9,Dr. ANURAG GAUTAM,Cardiology,550
+9,Dr. PILLI BHANU SIVA TEJA,General medicine,600
+9,Dr. ASHU,Radio-therapy,500
+9,Dr. SODAM SRI NANDAN REDDY,Child health,500
+9,Dr. P MAHESH ANAND,Dermatology,650
+9,Dr. M H SAYAN SHAH,General Physicisian,600
+10,Dr. SHIKHAR GUPTA,Plastic surgery,550
+10,Dr. DIPRASOM DAS,Ophthalmology,750
+10,Dr. BAHADUR SINGH,ENT,650
+10,Dr. AMAN AGRAWAL,Neurosurgery,550
+10,Dr. VARUN CHOPRA,Cardiology,550
+10,Dr. SIDDHANT YASHAVANT,General medicine,600
+10,Dr. Shivkumar Sharma,Radio-therapy,500
+10,Dr. Raghavendra B Pandit,Child health,500
+10,Dr. Kartik Aggarwal,Dermatology,650
+10,Dr Shobhit Garg,General Physicisian,600
+11,Dr. Aman Aggarwal,Plastic surgery,550
+11,Dr. Parth Thakur Durgia,Ophthalmology,750
+11,Dr. Mankirat Dhillon,ENT,650
+11,Dr. Sana Mohsin,Neurosurgery,550
+11,Dr. Shivam Arora,Cardiology,550
+11,Dr. Harshil Shah,General medicine,600
+11,Dr. Vinamrita Patni ,Radio-therapy,500
+11,Dr. Yash Satish Sharma,Child health,500
+11,Dr. Aakanksha Himanshu Naik,Dermatology,650
+11,Dr. Abhishek,General Physicisian,600
+12,Dr. Tejas Ghodsara,Orthopedics,600
+12,Dr. Keerthana K.M,Orthopedics,600
+12,Dr. Paritosh Kotak,Orthopedics,600
+12,Dr. Kavan Parikh,Orthopedics,600
+12,Dr. Aradhana,Orthopedics,600
+12,Dr. Muskan Chandak,Orthopedics,600,
+12,Dr. Ashraf Kesarani,Orthopedics,600
+12,Dr. Sricharan Embar,Orthopedics,600
+12,Dr. Lalith Kummetha,Orthopedics,600
+12,Dr. Rajat R Gauda,Orthopedics,600
+13,Dr. Yash Shah,Plastic surgery,550
+13,Dr. Kavan Parikh,Ophthalmology,750
+13,Dr. Ashraf M Kesarani,ENT,650
+13,Dr. Sricharan Embar,Neurosurgery,550
+13,Dr. Lalith Kummetha,Cardiology,550
+13,Dr. Aishwarya Durgad,General medicine,600
+13,Dr. Rajat R Gauda,Radio-therapy,500
+13,Dr. Shiv Kumar Sharma,Child health,500
+13,Dr. Raghavendra B Pandit,Dermatology,650
+13,Dr. Kartik Aggarwal,General Physicisian,600
+14,Dr. Shobhit Garg,Plastic surgery,550
+14,Dr. Aman Aggarwal,Ophthalmology,750
+14,Dr. Parth Durgia,ENT,650
+14,Dr. Mankirat Dhillon,Neurosurgery,550
+14,Dr. Sana Mohsin,Cardiology,550
+14,Dr. Shivam Arora,General medicine,600
+14,Dr. Harshil Shah,Radio-therapy,500
+14,Dr. NISARG CHADHA,Child health,500
+14,Dr. GURKIRAT SINGH,Dermatology,650
+14,Dr. DIVYANSHU AGARWAL,General Physicisian,600
+15,Dr. LANDA JITENDRA,General Medicine,600 
+15,Dr. SWAYAM SHASHANK CHUBE,General Medicine,600
+15,Dr. NISHANT AGARWAL,General Medicine,600
+15,Dr. Y S S NARASIMHA NAIDU,General Medicine,600
+15,Dr. R MUHENDER RAJ,General Medicine,600
+15,Dr. PARTH DWIVEDI,Body massage,700
+15,Dr. HARSHVARDHAN AGARWAL,Body massage,700
+15,Dr. TUSHAR SETH I,Body massage,700
+15,Dr. VADAPALLI ARVIND NARASIMHA,Body massage,700
+15,Dr. CHIRAG FALOR,Body massage,700
+16,Dr. CHAGARI KOUSHAL KUMAR REDDY,Plastic surgery,550
+16,Dr. THADAVARTHI VISHNU SRI SAi SANKAR,Ophthalmology,750
+16,Dr. AKHIL AGRAWAL,ENT,650
+16,Dr. AKHIL JAIN,Neurosurgery,550
+16,Dr. CHUKKA TANUJA,Cardiology,550
+16,Dr. SHIVA KRISHNA SAGI,General medicine,600
+16,Dr. DEETI YESHASH CHANDRA,Radio-therapy,500
+16,Dr. MORREDDIGARI LIKHITH REDDY,Child health,500
+16,Dr. RACHAPALLE SHASHANK  ANIRUDH,Dermatology,650
+16,Dr. RONGALA ARUN SIDDARDHA,General Physicisian,600
+17,Dr. LAKSH GUPTA,Plastic surgery,550
+17,Dr. B RAJESH,Ophthalmology,750
+17,Dr. LANDA JITENDRA,ENT,650
+17,Dr. VISHNU SRI SAi SANKAR,Neurosurgery,550
+17,Dr. Y S S NARASIMHA NAIDU,Cardiology,550
+17,Dr. NUTAN KUMARI SAH,General medicine,600
+17,Dr. EESHAAN DUTIA,Radio-therapy,500
+17,Dr. SHUBH KUMAR,Child health,500
+17,Dr. KUNWAR PREET SINGH,Dermatology,650
+17,Dr. SHREYA AGRAWAL,General Physicisian,600
+18,Dr. SHARAD VISHWAKARMA,Cardiology,550
+18,Dr. GUNJAN ATUL SHIN DE,Cardiology,550
+18,Dr. CHIRAG FALOR,Cardiology,550
+18,Dr. GURKIRAT SINGH,Cardiology,550
+18,Dr. LAKSH GUPTA,Cardiology,550
+18,Dr. NISHANT AGARWAL,Cardiology,550
+18,Dr. TUSHAR SETH ,Cardiology,550
+18,Dr. SIDDHANT  GOVEKAR,Cardiology,550
+18,Dr. NISARG CHADHA,Cardiology,550
+18,Dr. DIVYANSHU AGARWAL,Cardiology,550
+19,Dr. HARSHVARDHAN AGARWAL,Plastic surgery,550
+19,Dr. SARTHAK DIWAN,Ophthalmology,750
+19,Dr. ARYAN GUPTA,ENT,650
+19,Dr. JHARKHAND,Neurosurgery,550
+19,Dr. SHUBHAN R,Cardiology,550
+19,Dr. ADVAID DEEPAK,General medicine,600
+19,Dr. PARVEEZ  MEHDI,Radio-therapy,500
+19,Dr. ASNA JALEEL K I,Child health,500
+19,Dr. AKARSH JAIN,Dermatology,650
+19,Dr. SWAYAM SHASHANK CHUBE,General Physicisian,600
+20,Dr. CHETANNA RAJKUMARI,Plastic surgery,550
+20,Dr. KHROO MEDA DKHAR,Ophthalmology,750
+20,Dr. ANDREW  ZOSANGZUALA,ENT,650
+20,Dr. S NOKZENDI AIER,Neurosurgery,550
+20,Dr. SOURABH SOUMYAKANTA DAS,Cardiology,550
+20,Dr. MOKSHITH NAIDU THAKKILAPATI,General medicine,600
+20,Dr. VISWANADHAPALLI  RAJESH,Radio-therapy,500
+20,Dr. UJJWAL MEHTA,Child health,500
+20,Dr. AKHIL AGRAWAL,Dermatology,650
+20,Dr. AKHIL JAIN,General Physicisian,600
+21,Dr. PARTH DWIVEDI,Plastic surgery,550
+21,Dr. R MUHENDER RAJ,Ophthalmology,750
+21,Dr. UTKARSH SRIVASTAVA,ENT,650
+21,Dr. GAURAV R KOCHAR,Neurosurgery,550
+21,Dr. CHAGARI KOUSHAL KUMAR,Cardiology,550
+21,Dr. REDDY,General medicine,600
+21,Dr. CHUKKA TANUJA,Radio-therapy,500
+21,Dr. DEETI YESHASH CHANDRA,Child health,500
+21,Dr. MORREDDIGARI LIKHITH REDDY,Dermatology,650
+21,Dr. RACHAPALLE SHASHANK,General Physicisian,600
+22,Dr. RONGALA ARUN SIDDARDHA,Plastic surgery,550
+22,Dr. SHIVA KRISHNA SAGI,Ophthalmology,750
+22,Dr. VADAPALLI ARVIND NARASIMHA,ENT,650
+22,Dr. GAURAV MALAKAR,Neurosurgery,550
+22,Dr. L GOKULNATH,Cardiology,550
+22,Dr. BASHAR AHMED,General medicine,600
+22,Dr. SREEMANTI  DEY,Radio-therapy,500
+22,Dr. G SWATH I,Child health,500
+22,Dr. REDDY BHAVANA,Dermatology,650
+22,Dr. NUTAN KUMARI,General Physicisian,600
+23,Dr. PRATIKSHA,Plastic surgery,550
+23,Dr. SHARMA,Ophthalmology,750
+23,Dr. AAKRITY PANDEY,ENT,650
+23,Dr. KASH ISH KAUSHAL,Neurosurgery,550
+23,Dr. SHREYA AGRAWAL,Cardiology,550
+23,Dr. PRIYANSHI,General medicine,600
+23,Dr. SRIVASTAVA,Radio-therapy,500
+23,Dr. PATEL HEMALI,Child health,500
+23,Dr. SURESHBHAI,Dermatology,650
+23,Dr. ERA SARDA,General Physicisian,600
+24,Dr. SHAIKH RUBIYA,Plastic surgery,550
+24,Dr. NIYATI MANISH,Ophthalmology,750
+24,Dr. MEHTA,ENT,650
+24,Dr. MOLINA DHEMBLA,Neurosurgery,550
+24,Dr. VANSHITA,Cardiology,550
+24,Dr. SAKSHI PANDITA,General medicine,600
+24,Dr. ANUSHKA,Radio-therapy,500
+24,Dr. ANUSHKA,Child health,500
+24,Dr. SRIVASTAVA,Dermatology,650
+24,Dr. ALEENA M R,General Physicisian,600
+25,Dr. SOFIYA  BANO,Plastic surgery,550
+25,Dr. ASNA JALEEL K I,Ophthalmology,750
+25,Dr. SHREEYA MOGHE,ENT,650
+25,Dr. TAYDE INDRAYANI,Neurosurgery,550
+25,Dr. SADANAND,Cardiology,550
+25,Dr. DEBJANI MONDAL,General medicine,600
+25,Dr. AKANKSHA,Radio-therapy,500
+25,Dr. GHUNALI M KINNY,Child health,500
+25,Dr. STITIPRAJNA SAHOO,Dermatology,650
+25,Dr. KRITHIKAA SENTHILKUMAR,General Physicisian,600
+26,Dr. RASAH NOURIN M,Plastic surgery,550
+26,Dr. ANAAD KAUR,Ophthalmology,750
+26,Dr. GUTTA SINDHUJA,ENT,650
+26,Dr. SRIYA MISHRA,Neurosurgery,550
+26,Dr. S.NIRUPAMA,Cardiology,550
+26,Dr. PRAKRIT BARUA,General medicine,600
+26,Dr. TAPISHI KAUR,Radio-therapy,500
+26,Dr. VARNIKA BHATT,Child health,500
+26,Dr. SREEMANTI DEY,Dermatology,650
+26,Dr. Shubhan Srivastava,General Physicisian,600
+27,Dr. Kevin Martin,Plastic surgery,550
+27,Dr. Dhruv Arora,Ophthalmology,750
+27,Dr. Jayesh Singla,ENT,650
+27,Dr. Battepati Karthikeya,Neurosurgery,550
+27,Dr. Nishant Abhangi,Cardiology,550
+27,Dr. Adelly Sai Kiran,General medicine,600
+27,Dr. Vishwanth K,Radio-therapy,500
+27,Dr. Konda Renu,Child health,500
+27,Dr. Abhay Pratap Singh Rathore,Dermatology,650
+27,Dr. Sambit Behera,General Physicisian,600
+28,Dr. Shubhankar Gambhir,Plastic surgery,550
+28,Dr. Ankit Kumar Misra,Ophthalmology,750
+28,Dr. Himanshu Gaurav Singh,ENT,650
+28,Dr. Prakhar Jagwani,Neurosurgery,550
+28,Dr. Dravya Marwaha,Cardiology,550
+28,Dr. Naman Gupta,General medicine,600
+28,Dr. Gupta Kartikey Chandresh,Radio-therapy,500
+28,Dr. Yindukuri Jayanth Phani Sai,Child health,500
+28,Dr. Samiksha Das,Dermatology,650
+28,Dr. Bojja Chetan Reddy,General Physicisian,600
+29,Dr. Gudipaty Aniket,Plastic surgery,550
+29,Dr. Jitender Kumar Yadav,Ophthalmology,750
+29,Dr. Raj Aryan Agrawal,ENT,650
+29,Dr. Prince Kumar Gupta,Neurosurgery,550
+29,Dr. Pradipta Parag Bora,Cardiology,550
+29,Dr. Shubhanshu Prasad,General medicine,600
+29,Dr. Konda Renu,Radio-therapy,500
+29,Dr. Avinabh Bhardwaj,Child health,500
+29,Dr. Rishabh Bhatnagar,Dermatology,650
+29,Dr. Dishank Jindal,General Physicisian,600
+30,Dr. Ashmit Singh,Plastic surgery,550
+30,Dr. Shubhan Srivastava,Ophthalmology,750
+30,Dr. Atharva Shrawge,ENT,650
+30,Dr. Parvik Nileshkumar Dave,Neurosurgery,550
+30,Dr. Jaiprakash Suresh Gurav,Cardiology,550
+30,Dr. Aakash Solanki,General medicine,600
+30,Dr. Dravya Marwaha,Radio-therapy,500
+30,Dr. Gudipaty Aniket,Child health,500
+30,Dr. Aman Yadav,Dermatology,650
+30,Dr. Kevin Martin,General Physicisian,600
+31,Dr. Vishnu Vinod,Plastic surgery,550
+31,Dr. Tom Saju,Ophthalmology,750
+31,Dr. Gourav Kumar,ENT,650
+31,Dr. Laishram Prince Singh,Neurosurgery,550
+31,Dr. Dhruv Arora,Cardiology,550
+31,Dr. Ankit Kumar Misra,General medicine,600
+31,Dr. Akash Jyoti Sahoo,Radio-therapy,500
+31,Dr. Manish Kumar Chauhan,Child health,500
+31,Dr. Prateek Chaudhury,Dermatology,650
+31,Dr. Jayesh Singla,General Physicisian,600
+32,Dr. Chirantandip Mahanta,Plastic surgery,550
+32,Dr. Nishant Abhangi,Ophthalmology,750
+32,Dr. Rahul Gupta,ENT,650
+32,Dr. Shayandeep Bhaumik,Neurosurgery,550
+32,Dr. Battepati Karthikeya,Cardiology,550
+32,Dr. K v Vikram,General medicine,600
+32,Dr. Prateek Tibrewal,Radio-therapy,500
+32,Dr. Himanshu Gaurav Singh,Child health,500
+32,Dr. Koustav Sen,Dermatology,650
