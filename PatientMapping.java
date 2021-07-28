@@ -52,8 +52,6 @@ public class PatientMapping {
             myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String line = myReader.nextLine();
-                System.out.println(line);
-
                 String[] parts = line.split(",");
                 Doctor D1 = new Doctor(Integer.parseInt(parts[0]),
                         parts[1],
@@ -236,7 +234,7 @@ public class PatientMapping {
         }
         System.out.println("Enter the index of preferred department: ");
         int indexDep = myreader.nextInt();
-        p1.selectDoctor(indexHsp, deps[indexDep], "C:\\Users\\Praveen Raj HL\\Desktop/Doctors.txt");
+        p1.selectDoctor(indexHsp, deps[indexDep-1],"C:\\Users\\Praveen Raj HL\\Desktop/Doctor.txt");
 
 
         // Labtests
