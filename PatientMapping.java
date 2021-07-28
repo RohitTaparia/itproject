@@ -234,7 +234,7 @@ public class PatientMapping {
         }
         System.out.println("Enter the index of preferred department: ");
         int indexDep = myreader.nextInt();
-        p1.selectDoctor(indexHsp, deps[indexDep-1],"C:\\Users\\Praveen Raj HL\\Desktop/Doctor.txt");
+        p1.selectDoctor(p1.HspArray[indexHsp-1].getID(), deps[indexDep-1],"C:\\Users\\Praveen Raj HL\\Desktop/Doctor.txt");
 
 
         // Labtests
