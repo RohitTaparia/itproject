@@ -228,7 +228,7 @@ public class PatientMapping {
 
         System.out.println("--------------------------------------------------------------------");
         System.out.println("The available departments in the chosen hospital are: ");
-        String[] deps = p1.HspArray[indexHsp].getDepartments().split(",");
+        String[] deps = p1.HspArray[indexHsp-1].getDepartments().split(",");
         for (int i = 0; i < deps.length; i++) {
             System.out.println("Department " + (i + 1) + " " + deps[i]);
         }
