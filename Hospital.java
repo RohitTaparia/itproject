@@ -11,10 +11,6 @@ public class Hospital {
     private final String review;
     private final String rooms;
 
-    public static String[] getDepts() {
-        return depts;
-    }
-
     public String getReview() {
         return review;
     }
@@ -31,10 +27,6 @@ public class Hospital {
         this.costPerRoom = costPerRoom;
         this.review = review;
         this.rooms = rooms;
-    }
-
-    public static String[][] getScans() {
-        return scans;
     }
 
     public int getID() {
