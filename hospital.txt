@@ -1,3 +1,4 @@
+//dont use it check the one in data folder
 Bl014,12.895491826796063, 77.5986267223593,Fortis Hospital, Bannerghatta Main, Bangalore
 Bl015,12.918538077740994, 77.62492796615183,Aswad Hospital,Bangalore
 Bl016,12.90878816653302, 77.63207289837514,Dr.Levine Memorial Hospital-Unit 2,Bangalore
