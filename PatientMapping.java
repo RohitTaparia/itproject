@@ -251,8 +251,8 @@ public class PatientMapping {
         Scanner myreader = new Scanner(System.in);
         System.out.println("Enter the Hospital number you chose: ");
         int indexHsp = myreader.nextInt();
-        medRec.setHospital();
-        p1.selectHsp(indexHsp);
+        medRec.setHospital(p1.selectHsp(indexHsp));  // putting hospital in medical Records and also using selectHsp method
+       
 //        for (int i= 0;i<p1.totalHospitals;i++){
 //            System.out.println("--------------------------------------------------------------------");
 //            System.out.println(p1.HspArray[i]);
@@ -273,6 +273,8 @@ public class PatientMapping {
         System.out.println("The selected doctor is ");
         System.out.println(p1.DoctorArr[indexDoc]);
 
+        medRec.setDoctor(p1.DoctorArr[indexDoc]);
+
         // Labtests
         var arr = p1.labTestBuilder("src/data/LabTests.txt");
         var tests = p1.labTestPerformed(arr);
@@ -288,6 +290,8 @@ public class PatientMapping {
             }
         }
 
+        medRec.setFineLabTest(fine);
+        medRec.setNeedDoctorAttentionTest(needsAttention);
     }
 
 }
