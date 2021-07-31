@@ -126,41 +126,52 @@ public class PatientMapping {
         return nearest;
     }
 
-    public void selectHsp(int index) {
+    public Hospital selectHsp(int index) {
 
         switch (index) {
             case 1:
                 System.out.println(HspArray[0]);
+                return HspArray[0];
                 break;
             case 2:
                 System.out.println(HspArray[1]);
+                return HspArray[1];
                 break;
             case 3:
                 System.out.println(HspArray[2]);
+                return HspArray[2];
                 break;
             case 4:
                 System.out.println(HspArray[3]);
+                return HspArray[3];
                 break;
             case 5:
                 System.out.println(HspArray[4]);
+                return HspArray[4];
                 break;
             case 6:
                 System.out.println(HspArray[5]);
+                return HspArray[5];
                 break;
             case 7:
                 System.out.println(HspArray[6]);
+                return HspArray[6];
                 break;
             case 8:
                 System.out.println(HspArray[7]);
+                return HspArray[7];
                 break;
             case 9:
                 System.out.println(HspArray[8]);
+                return HspArray[8];
                 break;
             case 10:
                 System.out.println(HspArray[9]);
+                return HspArray[9];
                 break;
             default:
                 System.out.println("No choice was selected");
+                return HspArray[0]
 
         }
     }
@@ -233,11 +244,14 @@ public class PatientMapping {
         // information about the selected hospital.
         // Displays the depts in that hospital and asks to select one of those.
        PatientMapping p1 = new PatientMapping();
+        MedicalRecords medRec = new MedicalRecords("ABC",true , "DEF"); // Medical Record Defined
+
         Location l1 = new Location(28.6052154684654, 77.2155121525);
         p1.recommend(l1, 10, "C:\\Users\\Praveen Raj HL\\Desktop/ITproject.txt");
         Scanner myreader = new Scanner(System.in);
         System.out.println("Enter the Hospital number you chose: ");
         int indexHsp = myreader.nextInt();
+        medRec.setHospital();
         p1.selectHsp(indexHsp);
 //        for (int i= 0;i<p1.totalHospitals;i++){
 //            System.out.println("--------------------------------------------------------------------");
