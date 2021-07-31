@@ -26,6 +26,12 @@ Instance Methods-
     private LabTests[] fineLabTest;
     private LabTests[] needDoctorAttentionTest;
 
+    public MedicalRecords(String chronicDisease , boolean hyperTension , String previousDisease){
+    	this.chronicDisease = chronicDisease;
+    	this.hyperTension = hyperTension;
+    	this.previousDisease = previousDisease;
+	}
+
 	public String getChronicDisease() {
 		return chronicDisease;
 	}
