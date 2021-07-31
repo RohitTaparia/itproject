@@ -15,6 +15,19 @@ public class LabTests {
             return 0;
         }
     }
+    
+    public String getName() {
+        return name;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public String getDefination() {
+        return defination;
+    }
+
     public String toString(){
         return "Name- " + this.name + "\nCost- " + this.cost + "\nPurpose- " + this.defination;
     }
