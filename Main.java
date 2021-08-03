@@ -15,12 +15,7 @@ public class Main {
         Scanner myreader = new Scanner(System.in);
         System.out.println("Enter the Hospital number you chose: ");
         int indexHsp = myreader.nextInt();
-        medRec.setHospital(p1.selectHsp(indexHsp));  // putting hospital in medical Records and also using selectHsp method
-       
-//        for (int i= 0;i<p1.totalHospitals;i++){
-//            System.out.println("--------------------------------------------------------------------");
-//            System.out.println(p1.HspArray[i]);
-//        }
+        medRec.setHospital(p1.selectHsp(indexHsp - 1));  // putting hospital in medical Records and also using selectHsp method
 
         System.out.println("--------------------------------------------------------------------");
         System.out.println("The available departments in the chosen hospital are: ");
