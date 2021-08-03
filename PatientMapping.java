@@ -74,8 +74,9 @@ public class PatientMapping {
         return DoctorArr;
     }
 
-    public void selectDoctor(int index, String dep, String File) {
+  public void selectDoctors(int index, String dep, String File) {
         this.buildDoctor(File);
+        Scanner myreader = new Scanner(System.in);
         int[] arr = new int[totalDoctors];
         for (int i = 0, k = 0; i < totalDoctors; i++) {
             if (DoctorArr[i].getHospitalID() == index && DoctorArr[i].getDept().equals(dep)) {
@@ -86,6 +87,11 @@ public class PatientMapping {
                 k++;
             }
         }
+        System.out.println("Enter the index of the preferred doctor ");
+        int SlOfDoc = myreader.nextInt();
+        int indexDoc = this.slctDoctorArray(index, dep, File)[SlOfDoc - 1];
+        System.out.println("The selected doctor is ");
+        System.out.println(this.DoctorArr[indexDoc]);
     }
 
     public int[] slctDoctorArray(int index, String dep, String File) {
