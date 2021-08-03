@@ -60,6 +60,20 @@ public class Hospital {
     public String getDepartments() {
         return departments;
     }
+    
+    public void printDepts(PatientMapping p1,String DctrFile){
+        Scanner myreader = new Scanner(System.in);
+        System.out.println("The available departments in the chosen hospital are: ");
+        String[] deps = this.getDepartments().split(",");
+        for (int i = 0; i < deps.length; i++) {
+            System.out.println("Department " + (i + 1) + " " + deps[i]);
+        }
+
+        System.out.println("Enter the index of preferred department: ");
+        int indexDep = myreader.nextInt();
+        p1.selectDoctors(this.getID(), deps[indexDep - 1], DctrFile);
+
+    }
 
     public double getCostPerRoom() {
         return costPerRoom;
