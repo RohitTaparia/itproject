@@ -27,18 +27,8 @@ public class Main {
         // Labtests
         var arr = p1.labTestBuilder("src/data/LabTests.txt");
         var tests = p1.labTestPerformed(arr);
-        LabTests[] fine = new LabTests[100];
-        LabTests[] needsAttention = new LabTests[100];
-        for (int i = 0, j = 0, k = 0; i < tests.length; i++) {
-            if (tests[i].Result() == 1) {
-                fine[j] = tests[i];
-                j++;
-            } else {
-                needsAttention[k] = tests[i];
-                k++;
-            }
-        }
-
+        LabTests[] fine = tests[0];
+        LabTests[] needsAttention = tests[1];
         medRec.setFineLabTest(fine);
         medRec.setNeedDoctorAttentionTest(needsAttention);
     }
