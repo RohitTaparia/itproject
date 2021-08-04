@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Hospital {
     private final int ID;
     private final String name;

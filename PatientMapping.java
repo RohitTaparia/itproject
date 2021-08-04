@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PatientMapping {
+    int totalDoctors=0;
     protected Hospital[] HspArray = new Hospital[10000];
     private int totalHospitals = 0;
     protected Doctor DoctorArr[] = new Doctor[1000];
