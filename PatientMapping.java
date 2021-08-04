@@ -7,6 +7,7 @@ public class PatientMapping {
     protected Hospital[] HspArray = new Hospital[10000];
     private int totalHospitals = 0;
     protected Doctor DoctorArr[] = new Doctor[1000];
+    private int totalDoctors = 0;
 
     public Hospital[] getHspArray() {
         return HspArray;
