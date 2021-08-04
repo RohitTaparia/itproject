@@ -8,6 +8,7 @@ public class PatientMapping {
     protected Hospital[] HspArray = new Hospital[10000];
     private int totalHospitals = 0;
     protected Doctor DoctorArr[] = new Doctor[1000];
+    private int totalDoctors = 0;
 
     public Hospital[] getHspArray() {
         return HspArray;
@@ -133,7 +134,7 @@ public class PatientMapping {
         return nearest;
     }
 
-    public Hospital selectHsp(int index) {
+      public Hospital selectHsp(int index) {
 
         switch (index) {
             case 1:
@@ -169,7 +170,6 @@ public class PatientMapping {
             default:
                 System.out.println("No choice was selected");
                 return HspArray[0];
-
         }
     }
 

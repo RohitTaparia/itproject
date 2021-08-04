@@ -7,7 +7,7 @@ public class Main {
         // Hospital - Recommend 10 hospitals. asks to select one of these. Displays all
         // information about the selected hospital.
         // Displays the depts in that hospital and asks to select one of those.
-       PatientMapping p1 = new PatientMapping();
+        PatientMapping p1 = new PatientMapping();
         String HspFile = "C:\\Users\\Praveen Raj HL\\Desktop/ITproject.txt";
         String DctrFile = "C:\\Users\\Praveen Raj HL\\Desktop/Doctor.txt";
         MedicalRecords medRec = new MedicalRecords("ABC",true , "DEF"); // Medical Record Defined
@@ -18,12 +18,10 @@ public class Main {
         System.out.println("Enter the Hospital number you chose: ");
         int indexHsp = myreader.nextInt();
         medRec.setHospital(p1.selectHsp(indexHsp - 1));  // putting hospital in medical Records and also using selectHsp method
-
-        p1.selectHsp(indexHsp);
         System.out.println("--------------------------------------------------------------------");
-        p1.HspArray[indexHsp - 1].printDepts(p1, DctrFile);
-        
-        
+        p1.getHspArray()[indexHsp - 1].printDepts(p1, DctrFile);
+
+
         // Labtests
         var arr = p1.labTestBuilder("src/data/LabTests.txt");
         var tests = p1.labTestPerformed(arr);
