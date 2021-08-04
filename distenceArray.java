@@ -39,14 +39,14 @@ public class distenceArray {
             e.printStackTrace();
         }
     }
-    public static double[] getarr(Location ulocation) {
-        main();
-        double[] distence = new double[58];
-        for (int i = 0; i < 58; i++) {
-            distence[i] = Location.getdistence(location[i], ulocation);
-        }
-        return distence;
-    }
+    // public static double[] getarr(Location ulocation) {
+    //     main();
+    //     double[] distence = new double[58];
+    //     for (int i = 0; i < 58; i++) {
+    //         distence[i] = Location.getdistence(location[i], ulocation);
+    //     }
+    //     return distence;
+    // }
 
 }
 

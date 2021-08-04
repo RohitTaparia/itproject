@@ -8,8 +8,8 @@ public class Main {
         // information about the selected hospital.
         // Displays the depts in that hospital and asks to select one of those.
         PatientMapping p1 = new PatientMapping();
-        String HspFile = "C:\\Users\\Praveen Raj HL\\Desktop/ITproject.txt";
-        String DctrFile = "C:\\Users\\Praveen Raj HL\\Desktop/Doctor.txt";
+        String HspFile = "itproject/data/Hospitals.txt";
+        String DctrFile ="itproject/data/doctor.txt";
         MedicalRecords medRec = new MedicalRecords("ABC",true , "DEF"); // Medical Record Defined
 
         Location l1 = new Location(28.6052154684654, 77.2155121525);
@@ -23,7 +23,7 @@ public class Main {
 
 
         // Labtests
-        var arr = p1.labTestBuilder("src/data/LabTests.txt");
+        var arr = p1.labTestBuilder("itproject/data/LabTests.txt");
         var tests = p1.labTestPerformed(arr);
         LabTests[] fine = tests[0];
         LabTests[] needsAttention = tests[1];
