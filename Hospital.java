@@ -74,7 +74,7 @@ public class Hospital {
         System.out.println("Enter the index of preferred department: ");
         int indexDep = myreader.nextInt();
         p1.selectDoctors(this.getID(), deps[indexDep - 1], DctrFile);
-
+        
     }
 
     public double getCostPerRoom() {

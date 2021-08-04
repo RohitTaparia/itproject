@@ -1,2 +1,11 @@
 Hbg|200|This is the protein in your blood that holds the oxygen.
 White blood cells|500|also called leukocytes ,are the cells of the immune system.
+RBC|200|They carry oxygen through your body. They also help filter carbon dioxide.
+Hct (hematocrit)|300|Is the volume % percentage of red blood cell.
+MCV|200|This is the average size of your red blood cells.
+Platelets|300|Component of blood whose function is to stop bleeding by clumping and clotting blood vessel.
+Bilirubin Total|800|Bilirubin is a reddish yellow pigment made during the normal breakdown of red blood cells.
+SGOT (AST)|900|Serum glutamic oxaloacetic transaminase, an enzyme that is normally present in liver and heart cells.
+Total Protein|800|is a biochemical test for measuring the total amount of protein in serum. Protein in the serum is made up of albumin and globulin.
+Albumin|500|Is produced in the liver and forms a large proportion of all plasma protein.
+Globulin|1000|Group of proteins in blood, play an important role in liver function, blood clotting, and fighting infection.
