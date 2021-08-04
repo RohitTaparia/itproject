@@ -25,9 +25,9 @@ public class Main {
         // Labtests
         var arr = p1.labTestBuilder("itproject/data/LabTests.txt");
         var tests = p1.labTestPerformed(arr);
-        // LabTests[] fine = tests[0];
-        // LabTests[] needsAttention = tests[1];
-        // medRec.setFineLabTest(fine);
-        // medRec.setNeedDoctorAttentionTest(needsAttention);
+        LabTests[] fine = tests[0];
+        LabTests[] needsAttention = tests[1];
+        medRec.setFineLabTest(fine);
+        medRec.setNeedDoctorAttentionTest(needsAttention);
     }
 }

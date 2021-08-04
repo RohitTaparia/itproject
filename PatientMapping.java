@@ -217,32 +217,31 @@ public class PatientMapping {
                 labTestPerformedIndex.add(num);
             }
          }
-        // LabTests[] tests = new LabTests[numOfTests];
+        LabTests[] tests = new LabTests[numOfTests];
         System.out.println("\nTHE MEDICAL TESTS TO BE PERFORMED ON YOU\n");
-        // for (int i = 0; i < numOfTests; i++) {
-        //     System.out.println((i+1) +" "+labArray[labTestPerformedIndex.get(i)]);
-        //     tests[i] = labArray[labTestPerformedIndex.get(i)];
-        //     System.out.println();
-        // }
-        // System.out.println("Enter # if you want to have tests: ");
-        // Scanner scan1 = new Scanner(System.in);
-        // String str = scan1.nextLine();
-        // LabTests[][] testsDividedForFineAndNeedAttention = new LabTests[2][100];
-        // if(str != "#"){
-        //     for (int i = 0, j = 0, k = 0; i < tests.length; i++) {
-        //         if (tests[i].Result() == 1) {
-        //             testsDividedForFineAndNeedAttention[0][j] = tests[i];
-        //             j++;
-        //         } else {
-        //             testsDividedForFineAndNeedAttention[1][k] = tests[i];
-        //             k++;
-        //         }
-        //     }
-        //     return testsDividedForFineAndNeedAttention;
-        // }else{
-        //     return null;
-        // }
-        return null;
+        for (int i = 0; i < numOfTests; i++) {
+            System.out.println((i+1) +" "+labArray[labTestPerformedIndex.get(i)]);
+            tests[i] = labArray[labTestPerformedIndex.get(i)];
+            System.out.println();
+        }
+        System.out.println("Enter # if you want to have tests: ");
+        Scanner scan1 = new Scanner(System.in);
+        String str = scan1.nextLine();
+        LabTests[][] testsDividedForFineAndNeedAttention = new LabTests[2][100];
+        if(str != "#"){
+            for (int i = 0, j = 0, k = 0; i < tests.length; i++) {
+                if (tests[i].Result() == 1) {
+                    testsDividedForFineAndNeedAttention[0][j] = tests[i];
+                    j++;
+                } else {
+                    testsDividedForFineAndNeedAttention[1][k] = tests[i];
+                    k++;
+                }
+            }
+            return testsDividedForFineAndNeedAttention;
+        }else{
+            return null;
+        }
     }
 
 }
