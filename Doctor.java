@@ -53,4 +53,8 @@ public class Doctor {
     public void prescribeMed() {
         //this method needs some modifications. will discuss in meet
     }
+
+    public int recomStayInHospital(){
+        return (int)(28*Math.random());
+    }
 }

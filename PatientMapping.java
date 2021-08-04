@@ -209,6 +209,9 @@ public class PatientMapping {
     public LabTests[][] labTestPerformed(LabTests[] labArray) {
         int numOfTests;
         numOfTests = (int) (Math.random() * 11);
+        if(numOfTests==0 || numOfTests==1){
+            numOfTests = 2;
+        }
         ArrayList<Integer> labTestPerformedIndex = new ArrayList<>();
         System.out.println(labArray.length);
         while (labTestPerformedIndex.size() <= numOfTests) {
@@ -217,6 +220,7 @@ public class PatientMapping {
                 labTestPerformedIndex.add(num);
             }
          }
+        System.out.println("-------------------------------------------------------------");
         LabTests[] tests = new LabTests[numOfTests];
         System.out.println("\nTHE MEDICAL TESTS TO BE PERFORMED ON YOU\n");
         for (int i = 0; i < numOfTests; i++) {
