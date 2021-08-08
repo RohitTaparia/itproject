@@ -63,7 +63,7 @@ public class Hospital {
         return departments;
     }
     
-    public void printDepts(PatientMapping p1,String DctrFile){
+    public void printDepts(PatientMapping p1,String DctrFile, MedicalRecords medRec){
         Scanner myreader = new Scanner(System.in);
         System.out.println("The available departments in the chosen hospital are: ");
         String[] deps = this.getDepartments().split(",");
@@ -73,7 +73,7 @@ public class Hospital {
 
         System.out.println("Enter the index of preferred department: ");
         int indexDep = myreader.nextInt();
-        p1.selectDoctors(this.getID(), deps[indexDep - 1], DctrFile);
+        p1.selectDoctors(this.getID(), deps[indexDep - 1], DctrFile, medRec);
         
     }
 

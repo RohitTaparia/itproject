@@ -31,9 +31,6 @@ public class Doctor {
     }
 
     public double getFees() {
-        if(Fees.equals(null)){
-            return 1000;
-        }
         return Fees;
     }
 

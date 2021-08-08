@@ -76,7 +76,7 @@ public class PatientMapping {
         return DoctorArr;
     }
 
-  public void selectDoctors(int index, String dep, String File) {
+  public void selectDoctors(int index, String dep, String File, MedicalRecords medRec) {
         this.buildDoctor(File);
         Scanner myreader = new Scanner(System.in);
         int[] arr = new int[totalDoctors];
@@ -94,6 +94,7 @@ public class PatientMapping {
         int indexDoc = this.slctDoctorArray(index, dep, File)[SlOfDoc - 1];
         System.out.println("The selected doctor is ");
         System.out.println(this.DoctorArr[indexDoc]);
+        medRec.setDoctor(this.DoctorArr[indexDoc]);
     }
 
     public int[] slctDoctorArray(int index, String dep, String File) {
@@ -213,8 +214,7 @@ public class PatientMapping {
             numOfTests = 2;
         }
         ArrayList<Integer> labTestPerformedIndex = new ArrayList<>();
-        System.out.println(labArray.length);
-        while (labTestPerformedIndex.size() <= numOfTests) {
+        while (labTestPerformedIndex.size() < numOfTests) {
             int num = (int) (Math.random() * labArray.length);
             if (!labTestPerformedIndex.contains(num)) {
                 labTestPerformedIndex.add(num);

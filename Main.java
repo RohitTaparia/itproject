@@ -19,7 +19,7 @@ public class Main {
         int indexHsp = myreader.nextInt();
         medRec.setHospital(p1.selectHsp(indexHsp - 1));  // putting hospital in medical Records and also using selectHsp method
         System.out.println("--------------------------------------------------------------------");
-        p1.getHspArray()[indexHsp - 1].printDepts(p1, DctrFile);
+        p1.getHspArray()[indexHsp - 1].printDepts(p1, DctrFile,medRec);
 
         //Room
 

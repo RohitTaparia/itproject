@@ -9,7 +9,7 @@ public class Bill {
     }
 
     public void generateBill(){
-        double docFee = medRecord.getDoctor().getFees(),bill;
+        double docFee = 1000,bill;
         double roomFee = medRecord.getHospital().getCostPerRoom();
         double labTestsCharge=0;
         LabTests[] tests = medRecord.getFineLabTest();
