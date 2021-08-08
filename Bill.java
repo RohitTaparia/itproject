@@ -9,18 +9,24 @@ public class Bill {
     }
 
     public void generateBill(){
-        double docFee = 1000,bill;
+        double docFee = medRecord.getDoctor().getFees(),bill;
         double roomFee = medRecord.getHospital().getCostPerRoom();
         double labTestsCharge=0;
         LabTests[] tests = medRecord.getFineLabTest();
         LabTests[] tests2 = medRecord.getNeedDoctorAttentionTest();
 
         for(int i=0 ;i <medRecord.getFineLabTest().length;i++){
+            if(tests[i]==null){
+                break;
+            }
             labTestsCharge += tests[i].getCost();
         }
 
         for(int i=0; i<medRecord.getNeedDoctorAttentionTest().length; i++){
-            labTestsCharge += tests[i].getCost();
+            if(tests2[i]==null){
+                break;
+            }
+            labTestsCharge += tests2[i].getCost();
         }
 
         bill = docFee + roomFee*medRecord.getDoctor().recomStayInHospital() + labTestsCharge;
@@ -28,9 +34,9 @@ public class Bill {
         bill += (18/100)*bill; 
 
         System.out.println("---------------Bill Explained---------------\n"+
-        "Doctors fee - " + docFee + "\n Room charges(Number of days admitted * charges per day) - " +
-        roomFee*medRecord.getDoctor().recomStayInHospital() + "Lab Tests Charges - " + labTestsCharge +
-        "Total Bill (Hospital Charges + 18 % GST)" + bill
+        "Doctors fee - " + docFee + "\nRoom charges(Number of days admitted * charges per day) - " +
+        roomFee*medRecord.getDoctor().recomStayInHospital() + "\nLab Tests Charges - " + labTestsCharge +
+        "\nTotal Bill (Hospital Charges + 18 % GST) - " + bill
         );
         
     }
@@ -40,7 +46,7 @@ public class Bill {
     }
 
     public String billPayMode(){
-        System.out.println("Choose one of the following: ");
+        System.out.println("\n\nChoose one of the following payment mode: ");
         System.out.println("\n 1. Card \n 2. NetBanking \n 3. Cash \n 4. Cheque \n \n Enter the number here : ");
         Scanner scan1 = new Scanner(System.in);
         int input = scan1.nextInt();
@@ -56,5 +62,6 @@ public class Bill {
             default:
                 return "Invalid Input";
         }
+
     }
 }

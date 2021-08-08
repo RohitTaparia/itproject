@@ -38,7 +38,6 @@ public class Main {
         //Bill
         Bill bill = new Bill(medRec);
         bill.generateBill();
-
-
+        System.out.println("So your choose mode of payment is : " + bill.billPayMode());
     }
 }
