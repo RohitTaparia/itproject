@@ -6,7 +6,7 @@ public class Doctor {
     private  int HospitalID;
     private  String Name;
     private  String Dept;
-    private  double Fees;
+    private  Double Fees;
 
 
     public Doctor(int HospitalID,String Name,String Dept,double Fees) {
@@ -31,11 +31,10 @@ public class Doctor {
     }
 
     public double getFees() {
+        if(Fees.equals(null)){
+            return 1000;
+        }
         return Fees;
-    }
-
-    public void setFees(int fees) {
-        Fees = fees;
     }
 
     public int getHospitalID() {

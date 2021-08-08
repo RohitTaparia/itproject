@@ -21,7 +21,12 @@ public class Main {
         System.out.println("--------------------------------------------------------------------");
         p1.getHspArray()[indexHsp - 1].printDepts(p1, DctrFile);
 
+        //Room
 
+
+
+
+ 
         // Labtests
         var arr = p1.labTestBuilder("itproject/data/LabTests.txt");
         var tests = p1.labTestPerformed(arr);
@@ -29,5 +34,11 @@ public class Main {
         LabTests[] needsAttention = tests[1];
         medRec.setFineLabTest(fine);
         medRec.setNeedDoctorAttentionTest(needsAttention);
+
+        //Bill
+        Bill bill = new Bill(medRec);
+        bill.generateBill();
+
+
     }
 }

@@ -8,7 +8,7 @@ public class Bill {
         this.medRecord = medRecords;
     }
 
-    public double generateBill(){
+    public void generateBill(){
         double docFee = medRecord.getDoctor().getFees(),bill;
         double roomFee = medRecord.getHospital().getCostPerRoom();
         double labTestsCharge=0;
@@ -23,10 +23,16 @@ public class Bill {
             labTestsCharge += tests[i].getCost();
         }
 
-        bill = docFee + roomFee + labTestsCharge;
+        bill = docFee + roomFee*medRecord.getDoctor().recomStayInHospital() + labTestsCharge;
 
         bill += (18/100)*bill; 
-        return bill;
+
+        System.out.println("---------------Bill Explained---------------\n"+
+        "Doctors fee - " + docFee + "\n Room charges(Number of days admitted * charges per day) - " +
+        roomFee*medRecord.getDoctor().recomStayInHospital() + "Lab Tests Charges - " + labTestsCharge +
+        "Total Bill (Hospital Charges + 18 % GST)" + bill
+        );
+        
     }
 
     public boolean isBillPaid(){
