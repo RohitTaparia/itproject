@@ -241,9 +241,10 @@ public class PatientMapping {
         }
         System.out.println("Enter # if you want to have tests: ");
         Scanner scan1 = new Scanner(System.in);
-        String str = scan1.nextLine();
+        String str2 = scan1.nextLine();
+        char[] str = str2.toCharArray();
         LabTests[][] testsDividedForFineAndNeedAttention = new LabTests[2][100];
-        if (str == "#") {
+        if (str[0] == '#') {
             for (int i = 0, j = 0, k = 0; i < tests.length; i++) {
                 if (tests[i].Result() == 1) {
                     testsDividedForFineAndNeedAttention[0][j] = tests[i];
