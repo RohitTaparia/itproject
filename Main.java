@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
 
         // Hospital - Recommend 10 hospitals. asks to select one of these. Displays all
         // information about the selected hospital.
@@ -22,7 +22,8 @@ public class Main {
         p1.getHspArray()[indexHsp - 1].printDepts(p1, DctrFile,medRec);
 
         //Room
-
+        Room r1 = new Room(p1.getHspArray()[indexHsp - 1].getID(), p1.getHspArray()[indexHsp - 1].getName());
+        r1.generateRoom(HspFile);l̥
 
 
 
