@@ -9,6 +9,15 @@ public class PatientMapping {
     private int totalHospitals = 0;
     protected Doctor DoctorArr[] = new Doctor[1000];
     private int totalDoctors = 0;
+    protected Hospital[] nearest = new Hospital[10];
+
+    public int getTotalDoctors() {
+        return totalDoctors;
+    }
+
+    public Hospital[] getNearest() {
+        return nearest;
+    }
 
     public Hospital[] getHspArray() {
         return HspArray;
@@ -46,7 +55,9 @@ public class PatientMapping {
         this.HspArray = HspArrayLocal;
     }
 
-   public void buildDoctor(String filename) {
+
+
+    public void buildDoctor(String filename) {
         File myObj = new File(filename);
         Scanner myReader;
         int i = 0;
@@ -76,7 +87,7 @@ public class PatientMapping {
         return DoctorArr;
     }
 
-  public void selectDoctors(int index, String dep, String File, MedicalRecords medRec) {
+    public void selectDoctors(int index, String dep, String File, MedicalRecords medRec) {
         this.buildDoctor(File);
         Scanner myreader = new Scanner(System.in);
         int[] arr = new int[totalDoctors];
@@ -108,11 +119,11 @@ public class PatientMapping {
         }
         return arr;
     }
+
     public Hospital[] recommend(Location l, int n, String File) throws FileNotFoundException {
         this.HospitalBuilder(File);
         System.out.printf("\n\nNearest hospitals are:\n\n", n);
         Hospital temp;
-        Hospital[] nearest = new Hospital[totalHospitals];
         for (int i = 0; i < totalHospitals; i++) {
             for (int j = i + 1; j < totalHospitals; j++) {
                 if (HspArray[i].getDistance(l) > HspArray[j].getDistance(l)) {
@@ -128,49 +139,49 @@ public class PatientMapping {
                 continue;
             }
             k++;
-            nearest[i] = HspArray[i];
+            nearest[k-1] = HspArray[i];
             System.out.println("Hospital " + (k) + " " + HspArray[i].getName() + "  " + HspArray[i].getDistance(l) + "\n");
         }
         System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------------------");
         return nearest;
     }
 
-      public Hospital selectHsp(int index) {
+    public Hospital selectHsp(int index) {
 
         switch (index) {
+            case 0:
+                System.out.println(nearest[0]);
+                return nearest[0];
             case 1:
-                System.out.println(HspArray[0]);
-                return HspArray[0];
+                System.out.println(nearest[1]);
+                return nearest[1];
             case 2:
-                System.out.println(HspArray[1]);
-                return HspArray[1];
+                System.out.println(nearest[2]);
+                return nearest[2];
             case 3:
-                System.out.println(HspArray[2]);
-                return HspArray[2];
+                System.out.println(nearest[3]);
+                return nearest[3];
             case 4:
-                System.out.println(HspArray[3]);
-                return HspArray[3];
+                System.out.println(nearest[4]);
+                return nearest[4];
             case 5:
-                System.out.println(HspArray[4]);
-                return HspArray[4];
+                System.out.println(nearest[5]);
+                return nearest[5];
             case 6:
-                System.out.println(HspArray[5]);
-                return HspArray[5];
+                System.out.println(nearest[6]);
+                return nearest[6];
             case 7:
-                System.out.println(HspArray[6]);
-                return HspArray[6];
+                System.out.println(nearest[7]);
+                return nearest[7];
             case 8:
-                System.out.println(HspArray[7]);
-                return HspArray[7];
+                System.out.println(nearest[8]);
+                return nearest[8];
             case 9:
-                System.out.println(HspArray[8]);
-                return HspArray[8];
-            case 10:
-                System.out.println(HspArray[9]);
-                return HspArray[9];
+                System.out.println(nearest[9]);
+                return nearest[9];
             default:
                 System.out.println("No choice was selected");
-                return HspArray[0];
+                return nearest[0];
         }
     }
 
@@ -210,7 +221,7 @@ public class PatientMapping {
     public LabTests[][] labTestPerformed(LabTests[] labArray) {
         int numOfTests;
         numOfTests = (int) (Math.random() * 11);
-        if(numOfTests==0 || numOfTests==1){
+        if (numOfTests == 0 || numOfTests == 1) {
             numOfTests = 2;
         }
         ArrayList<Integer> labTestPerformedIndex = new ArrayList<>();
@@ -219,12 +230,12 @@ public class PatientMapping {
             if (!labTestPerformedIndex.contains(num)) {
                 labTestPerformedIndex.add(num);
             }
-         }
+        }
         System.out.println("-------------------------------------------------------------");
         LabTests[] tests = new LabTests[numOfTests];
         System.out.println("\nTHE MEDICAL TESTS TO BE PERFORMED ON YOU\n");
         for (int i = 0; i < numOfTests; i++) {
-            System.out.println((i+1) +" "+labArray[labTestPerformedIndex.get(i)]);
+            System.out.println((i + 1) + " " + labArray[labTestPerformedIndex.get(i)]);
             tests[i] = labArray[labTestPerformedIndex.get(i)];
             System.out.println();
         }
@@ -232,7 +243,7 @@ public class PatientMapping {
         Scanner scan1 = new Scanner(System.in);
         String str = scan1.nextLine();
         LabTests[][] testsDividedForFineAndNeedAttention = new LabTests[2][100];
-        if(str != "#"){
+        if (str != "#") {
             for (int i = 0, j = 0, k = 0; i < tests.length; i++) {
                 if (tests[i].Result() == 1) {
                     testsDividedForFineAndNeedAttention[0][j] = tests[i];
@@ -243,7 +254,7 @@ public class PatientMapping {
                 }
             }
             return testsDividedForFineAndNeedAttention;
-        }else{
+        } else {
             return null;
         }
     }
