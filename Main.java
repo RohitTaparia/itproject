@@ -31,7 +31,7 @@ public class Main {
         System.out.println("Enter # if agree to get admitted");
         Scanner scan1 = new Scanner(System.in);
         String str = scan1.nextLine();
-        if (str == "#") {
+        if (str.equals("#")) {
             medRec.setAdmitted(true);
 
             //Room
@@ -58,6 +58,6 @@ public class Main {
         //Bill
         Bill bill = new Bill(medRec);
         bill.generateBill();
-        System.out.println("So your choose mode of payment is : " + bill.billPayMode());
+        System.out.println("So your chosen mode of payment is : " + bill.billPayMode());
     }
 }
