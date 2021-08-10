@@ -38,7 +38,9 @@ public class Main {
             Room r1 = new Room(p1.getNearest()[indexHsp - 1].getID(), p1.getNearest()[indexHsp - 1].getName());
             System.out.println("-----------------------------");
             System.out.println("The room alloted is:");
-            System.out.println(r1.generateRoom(HspFile));
+            int room1 = r1.generateRoom(HspFile);
+            medRec.setRoom(room1);
+            System.out.println(room1);
         }
         else {
             medRec.setAdmitted(false);
