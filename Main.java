@@ -45,6 +45,10 @@ public class Main {
         else {
             medRec.setAdmitted(false);
         }
+        
+//          MedicalRecords
+        System.out.println("\n\n-------------Medical Record-----------------------");
+        System.out.println(medRec);
 
 
         // Labtests
