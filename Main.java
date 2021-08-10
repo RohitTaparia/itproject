@@ -59,5 +59,8 @@ public class Main {
         Bill bill = new Bill(medRec);
         bill.generateBill();
         System.out.println("So your chosen mode of payment is : " + bill.billPayMode());
+
+        System.out.println("\n\n--------------------------Your Medical Report------------------------------\n\n");
+        System.out.println(medRec);
     }
 }

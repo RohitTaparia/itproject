@@ -100,10 +100,8 @@ public class Hospital {
         String[] revw = review.split("\",");
         String[] rms = rooms.split("-");
         return "Hospital:" + "\n" +
-                "ID= " + ID + "\n" +
-                "name= '" + name + '\'' + "\n" +
-                "latitude= " + latitude + "\n" +
-                "longitude= " + longitude + "\n" +
+                "ID: " + ID + "\n" +
+                "Name: '" + name + '\'' + "\n" +
                 "rating= " + rating + "\n" +
                 "number= '" + number + '\'' + "\n" +
                 "address= '" + address + '\'' + "\n" +

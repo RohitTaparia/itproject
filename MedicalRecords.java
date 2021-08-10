@@ -110,11 +110,10 @@ Instance Methods-
 	}
 
 	public String toString(){
-		return "Chronic Disease: \n" + chronicDisease + "\n" +
-                "PreviousDisease: \n" + previousDisease + "\n" +
-                hospital + "\n" +
-                doctor + "\n" +
-                "Admitted: " + isAdmitted() + "\n" +
+		return "Chronic Disease: " + chronicDisease + "\n" +
+                "PreviousDisease: " + previousDisease + "\n\n" +
+        		"Hospital Name: "+ hospital.getName() + "\n" +
+                "Doctor Name: "+ doctor.getName() + "\n" +
                 "Room no.: " + getRoom() + "\n" +
                 "FineLabtest: \n" + fineLabTest + "\n" +
                 "NeedDoctorAttentionLabtest: \n" + needDoctorAttentionTest + "\n";
