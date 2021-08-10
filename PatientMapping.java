@@ -243,7 +243,7 @@ public class PatientMapping {
         Scanner scan1 = new Scanner(System.in);
         String str = scan1.nextLine();
         LabTests[][] testsDividedForFineAndNeedAttention = new LabTests[2][100];
-        if (str != "#") {
+        if (str == "#") {
             for (int i = 0, j = 0, k = 0; i < tests.length; i++) {
                 if (tests[i].Result() == 1) {
                     testsDividedForFineAndNeedAttention[0][j] = tests[i];
@@ -253,10 +253,12 @@ public class PatientMapping {
                     k++;
                 }
             }
-            return testsDividedForFineAndNeedAttention;
+            
         } else {
-            return null;
+            testsDividedForFineAndNeedAttention[0][0]=null;
+            testsDividedForFineAndNeedAttention[1][0] = null;
         }
+        return testsDividedForFineAndNeedAttention;
     }
 
 }
