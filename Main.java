@@ -9,7 +9,7 @@ public class Main {
         // information about the selected hospital.
         // Displays the depts in that hospital and asks to select one of those.
         PatientMapping p1 = new PatientMapping();
-        String HspFile = "itproject/data/Hospitas.txt";
+        String HspFile = "itproject/data/Hospitals.txt";
         String DctrFile = "itproject/data/doctor.txt";
         MedicalRecords medRec = new MedicalRecords("ABC", true, "DEF"); // Medical Record Defined
 
