@@ -103,8 +103,8 @@ Instance Methods-
 	public String toString(){
 		return "Chronic Disease: \n" + chronicDisease + "\n" +
 		"PreviousDisease: \n" + previousDisease  + "\n" +
-		"Hospital: \n" + hospital + "\n" + 
-		"Doctor: \n" + doctor + "\n" +
+		hospital + "\n" + 
+		doctor + "\n" +
 		"Admitted: " + isAdmitted() + "\n" + 
 		"FineLabtest: \n" + fineLabTest + "\n" +
 		"NeedDoctorAttentionLabtest: \n" + needDoctorAttentionTest + "\n";
