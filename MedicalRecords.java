@@ -79,6 +79,10 @@ Instance Methods-
 	public void setAdmitted(boolean admitted) {
 		this.admitted = admitted;
 	}
+	
+	public boolean isBolAdmitted() {
+        return admitted ? true : false;
+        }
 
 	public LabTests[] getFineLabTest() {
 		return fineLabTest;
