@@ -28,10 +28,21 @@ public class Main {
         p1.getNearest()[indexHsp - 1].printDepts(p1, DctrFile, medRec);
 
         //Room
-        Room r1 = new Room(p1.getNearest()[indexHsp - 1].getID(), p1.getNearest()[indexHsp - 1].getName());
-        System.out.println("-----------------------------");
-        System.out.println("The room alloted is:");
-        System.out.println(r1.generateRoom(HspFile));
+        System.out.println("Enter # if agree to get admitted");
+        Scanner scan1 = new Scanner(System.in);
+        String str = scan1.nextLine();
+        if (str == "#") {
+            medRec.setAdmitted(true);
+
+            //Room
+            Room r1 = new Room(p1.getNearest()[indexHsp - 1].getID(), p1.getNearest()[indexHsp - 1].getName());
+            System.out.println("-----------------------------");
+            System.out.println("The room alloted is:");
+            System.out.println(r1.generateRoom(HspFile));
+        }
+        else {
+            medRec.setAdmitted(false);
+        }
 
 
         // Labtests
