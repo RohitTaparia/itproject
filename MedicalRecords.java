@@ -25,6 +25,15 @@ Instance Methods-
     private boolean admitted;
     private LabTests[] fineLabTest;
     private LabTests[] needDoctorAttentionTest;
+    private int Room;
+
+    public int getRoom() {
+        return Room;
+    }
+
+    public void setRoom(int room) {
+        this.Room = room;
+    }
 
     public MedicalRecords(String chronicDisease , boolean hyperTension , String previousDisease){
     	this.chronicDisease = chronicDisease;
@@ -102,11 +111,12 @@ Instance Methods-
 
 	public String toString(){
 		return "Chronic Disease: \n" + chronicDisease + "\n" +
-		"PreviousDisease: \n" + previousDisease  + "\n" +
-		hospital + "\n" + 
-		doctor + "\n" +
-		"Admitted: " + isAdmitted() + "\n" + 
-		"FineLabtest: \n" + fineLabTest + "\n" +
-		"NeedDoctorAttentionLabtest: \n" + needDoctorAttentionTest + "\n";
+                "PreviousDisease: \n" + previousDisease + "\n" +
+                hospital + "\n" +
+                doctor + "\n" +
+                "Admitted: " + isAdmitted() + "\n" +
+                "Room no.: " + getRoom() + "\n" +
+                "FineLabtest: \n" + fineLabTest + "\n" +
+                "NeedDoctorAttentionLabtest: \n" + needDoctorAttentionTest + "\n";
 	}
 }
