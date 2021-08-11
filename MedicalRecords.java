@@ -130,7 +130,7 @@ Instance Methods-
 	public String toString(){
 		String str = "Patient name: \n" + PatName + "\n" +
                 "\nPatient age: \n" + PatAge + "\n\n" +
-		"Chronic Disease: \n" + chronicDisease + "\n\n" +
+                "Chronic Disease: \n" + chronicDisease + "\n\n" +
                 "PreviousDisease: \n" + previousDisease + "\n\n" +
                 hospital + "\n" +
                 doctor + "\n" +
@@ -139,12 +139,24 @@ Instance Methods-
             str += "\nRoom no.: " + getRoom() + "\n";
         }
         str += "\nFineLabtest: \n";
-        for (int i = 0; i < fineLabTest.length; i++) {
-            if (fineLabTest[i] != null) str += fineLabTest[i] + "\n";
+        for (int i = 0, k = 0; i < fineLabTest.length; i++) {
+            if (needDoctorAttentionTest[i] != null) {
+                str += fineLabTest[i] + "\n";
+                k++;
+            }
+            if ((i == fineLabTest.length - 1) && k == 0) {
+                str += "none\n";
+            }
         }
         str += "\nNeedDoctorAttentionLabtest: \n";
-        for (int i = 0; i < needDoctorAttentionTest.length; i++) {
-            if (needDoctorAttentionTest[i] != null) str += needDoctorAttentionTest[i] + "\n";
+        for (int i = 0, k = 0; i < needDoctorAttentionTest.length; i++) {
+            if (needDoctorAttentionTest[i] != null) {
+                str += needDoctorAttentionTest[i] + "\n";
+                k++;
+            }
+            if ((i == needDoctorAttentionTest.length - 1) && k == 0) {
+                str += "none\n";
+            }
         }
 
         return str;
