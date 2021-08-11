@@ -70,10 +70,18 @@ public class Hospital {
         for (int i = 0; i < deps.length; i++) {
             System.out.println("Department " + (i + 1) + " " + deps[i]);
         }
-
-        System.out.println("Enter the index of preferred department: ");
-        int indexDep = myreader.nextInt();
-        p1.selectDoctors(this.getID(), deps[indexDep - 1], DctrFile, medRec);
+        int indexDep;
+        while(true){
+            System.out.println("Enter the index of preferred department: ");
+            indexDep = myreader.nextInt();
+            if(indexDep>=1 && indexDep <= deps.length){
+                break;
+            }else{
+                System.out.println("\n*Invalid Input, Enter value from 1 to " + deps.length+ "\n");
+            }
+              
+        }
+        p1.selectDoctors(this.getID(), deps[indexDep - 1], DctrFile, medRec); 
         
     }
 

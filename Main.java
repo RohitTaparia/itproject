@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        // Hospital - Recommend 10 hospitals. asks to select one of these. Displays all
-        // information about the selected hospital.
-        // Displays the depts in that hospital and asks to select one of those.
+        
         PatientMapping p1 = new PatientMapping();
         String HspFile = "itproject/data/Hospitals.txt";
         String DctrFile = "itproject/data/doctor.txt";
@@ -15,21 +13,21 @@ public class Main {
 
         Location l1 = new Location(28.6052154684654, 77.2155121525);
         p1.recommend(l1, 10, HspFile);
-//        for (int i = 0; i < p1.getNearest().length; i++) {
-//            System.out.println(i + "--------------------------------");
-//            System.out.println(p1.getNearest()[i]);
-//
-//        }
+        
+        
+        // Hospital - Recommend 10 hospitals. asks to select one of these. Displays all
+        // information about the selected hospital.
+        // Displays the depts in that hospital and asks to select one of those.
         Scanner myreader = new Scanner(System.in);
         int indexHsp;
-        while(true){
-        System.out.println("Enter the Hospital number you chose: ");
-        indexHsp = myreader.nextInt();
-        if(indexHsp<=10 && indexHsp>=1){
-            break;
-        }else{
-            System.out.println("\n*Invalid input choose from 1 to 10\n");
-        }
+        while (true) {
+            System.out.println("Enter the Hospital number you chose: ");
+            indexHsp = myreader.nextInt();
+            if (indexHsp <= 10 && indexHsp >= 1) {
+                break;
+            } else {
+                System.out.println("\n*Invalid input choose from 1 to 10\n");
+            }
         }
 
         medRec.setHospital(p1.selectHsp((indexHsp - 1)));  // putting hospital in medical Records and also using selectHsp method
@@ -42,8 +40,6 @@ public class Main {
         String str = scan1.nextLine();
         if (str.equals("#")) {
             medRec.setAdmitted(true);
-
-            //Room
             Room r1 = new Room(p1.getNearest()[indexHsp - 1].getID(), p1.getNearest()[indexHsp - 1].getName());
             System.out.println("-----------------------------");
             System.out.println("The room alloted is:");

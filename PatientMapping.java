@@ -100,12 +100,22 @@ public class PatientMapping {
                 k++;
             }
         }
-        System.out.println("Enter the index of the preferred doctor ");
-        int SlOfDoc = myreader.nextInt();
-        int indexDoc = this.slctDoctorArray(index, dep, File)[SlOfDoc - 1];
-        System.out.println("The selected doctor is ");
-        System.out.println(this.DoctorArr[indexDoc]);
-        medRec.setDoctor(this.DoctorArr[indexDoc]);
+        int slOfDoc;
+        while (true) {
+            System.out.println("Enter the index of the preferred doctor ");
+            slOfDoc = myreader.nextInt();
+            if (slOfDoc >= 1 && slOfDoc <= totalDoctors) {
+                int indexDoc = this.slctDoctorArray(index, dep, File)[slOfDoc - 1];
+                System.out.println("The selected doctor is ");
+                System.out.println(this.DoctorArr[indexDoc]);
+                medRec.setDoctor(this.DoctorArr[indexDoc]);
+                break;
+            } else {
+                System.out.println("\nEnter Valid input of Doctors number in list\n");
+            }
+
+        }
+
     }
 
     public int[] slctDoctorArray(int index, String dep, String File) {
