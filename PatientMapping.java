@@ -10,6 +10,16 @@ public class PatientMapping {
     protected Doctor DoctorArr[] = new Doctor[1000];
     private int totalDoctors = 0;
     protected Hospital[] nearest = new Hospital[10];
+    protected Patient PatientArr[] = new Patient[1000];
+    private int totalPatients = 0;
+    
+     public Patient[] getPatientArr() {
+        return PatientArr;
+    }
+
+    public int getTotalPatients() {
+        return totalPatients;
+    }
 
     public int getTotalDoctors() {
         return totalDoctors;
@@ -75,6 +85,32 @@ public class PatientMapping {
                 DoctorArr[i] = D1;
                 i++;
                 totalDoctors++;
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+    
+    public void buildPatient(String filename) {
+        File myObj = new File(filename);
+        Scanner myReader;
+        int i = 0;
+        try {
+            myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String line = myReader.nextLine();
+                String[] parts = line.split("\\|");
+                Patient p1 = new Patient(Integer.parseInt(parts[0]),
+                        parts[1],
+                        Double.parseDouble(parts[2]),
+                        Double.parseDouble(parts[3]),
+                        Integer.parseInt(parts[4]));
+
+                PatientArr[i] = p1;
+                i++;
+                totalPatients++;
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
