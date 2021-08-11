@@ -91,7 +91,8 @@ public class PatientMapping {
         this.buildDoctor(File);
         Scanner myreader = new Scanner(System.in);
         int[] arr = new int[totalDoctors];
-        for (int i = 0, k = 0; i < totalDoctors; i++) {
+        int k=0;
+        for (int i = 0; i < totalDoctors; i++) {
             if (DoctorArr[i].getHospitalID() == index && DoctorArr[i].getDept().equals(dep)) {
                 System.out.println("Doctor " + (k + 1));
                 System.out.println(DoctorArr[i]);
@@ -104,14 +105,14 @@ public class PatientMapping {
         while (true) {
             System.out.println("Enter the index of the preferred doctor ");
             slOfDoc = myreader.nextInt();
-            if (slOfDoc >= 1 && slOfDoc <= totalDoctors) {
+            if (slOfDoc >= 1 && slOfDoc <= k) {
                 int indexDoc = this.slctDoctorArray(index, dep, File)[slOfDoc - 1];
                 System.out.println("The selected doctor is ");
                 System.out.println(this.DoctorArr[indexDoc]);
                 medRec.setDoctor(this.DoctorArr[indexDoc]);
                 break;
             } else {
-                System.out.println("\nEnter Valid input of Doctors number in list\n");
+                System.out.println("\n*Enter Valid input of Doctors number in list\n");
             }
 
         }

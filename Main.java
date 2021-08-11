@@ -35,7 +35,7 @@ public class Main {
         p1.getNearest()[indexHsp - 1].printDepts(p1, DctrFile, medRec);
 
         //Room
-        System.out.println("Enter # if agree to get admitted");
+        System.out.println("\nEnter # if agree to get admitted");
         Scanner scan1 = new Scanner(System.in);
         String str = scan1.nextLine();
         if (str.equals("#")) {
