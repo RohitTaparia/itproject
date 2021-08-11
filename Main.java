@@ -21,8 +21,17 @@ public class Main {
 //
 //        }
         Scanner myreader = new Scanner(System.in);
+        int indexHsp;
+        while(true){
         System.out.println("Enter the Hospital number you chose: ");
-        int indexHsp = myreader.nextInt();
+        indexHsp = myreader.nextInt();
+        if(indexHsp<=10 && indexHsp>=1){
+            break;
+        }else{
+            System.out.println("\n*Invalid input choose from 1 to 10\n");
+        }
+        }
+
         medRec.setHospital(p1.selectHsp((indexHsp - 1)));  // putting hospital in medical Records and also using selectHsp method
         System.out.println("--------------------------------------------------------------------");
         p1.getNearest()[indexHsp - 1].printDepts(p1, DctrFile, medRec);
