@@ -1,5 +1,6 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -9,42 +10,33 @@ public class Main {
         PatientMapping p1 = new PatientMapping();
         String HspFile = "itproject/data/Hospitals.txt";
         String DctrFile = "itproject/data/doctor.txt";
-        String PatientFile = "itproject/data/Patients.txt";
         MedicalRecords medRec = new MedicalRecords("ABC", true, "DEF"); // Medical Record Defined
-        Scanner myreader = new Scanner(System.in);
-        
-        
-//         Patient
-        p1.buildPatient(PatientFile);
-        int token;
-        while (true) {
-            System.out.println("Enter the token number");
-            token = myreader.nextInt();
-            if (token <= p1.getTotalPatients() && token >= 1) {
-                break;
-            } else {
-                System.out.println("\n*Invalid input choose from 1 to " + p1.getTotalPatients() + "\n");
-            }
-        }
-        Location l1 = new Location(p1.PatientArr[token - 1].getLatitude(), p1.PatientArr[token - 1].getLongitude());
-        medRec.setPatName(p1.PatientArr[token - 1].getName());
-        medRec.setPatAge(p1.PatientArr[token - 1].getAge());
+
+        Location l1 = new Location(28.6052154684654, 77.2155121525);
         p1.recommend(l1, 10, HspFile);
         
         
         // Hospital - Recommend 10 hospitals. asks to select one of these. Displays all
         // information about the selected hospital.
         // Displays the depts in that hospital and asks to select one of those.
-        
+        Scanner myreader = new Scanner(System.in);
         int indexHsp;
         while (true) {
-            System.out.println("Enter the Hospital number you chose: ");
-            indexHsp = myreader.nextInt();
-            if (indexHsp <= 10 && indexHsp >= 1) {
-                break;
-            } else {
+            try {
+                System.out.println("Enter the Hospital number you chose: ");
+
+                indexHsp = myreader.nextInt();
+
+                if (indexHsp <= 10 && indexHsp >= 1) {
+                    break;
+                } else {
+                    System.out.println("\n*Invalid input choose from 1 to 10\n");
+                }
+            } catch (InputMismatchException i) {
                 System.out.println("\n*Invalid input choose from 1 to 10\n");
+                myreader.nextLine();
             }
+
         }
 
         medRec.setHospital(p1.selectHsp((indexHsp - 1)));  // putting hospital in medical Records and also using selectHsp method
