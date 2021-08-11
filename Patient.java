@@ -1,5 +1,3 @@
-package Graded.RealITProject;
-
 public class Patient {
     private final int tokenNo;
     private final String Name;
