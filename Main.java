@@ -70,9 +70,16 @@ public class Main {
         //Bill
         Bill bill = new Bill(medRec);
         bill.generateBill();
-        System.out.println("So your chosen mode of payment is : " + bill.billPayMode());
+        while(true){
+            String billMode = bill.billPayMode();
+            if(billMode != "Invalid Input"){
+                System.out.println("So your chosen mode of payment is : " + billMode);
+                break;
+            }else{
+                System.out.println("\n*Invalid Input, choose from 1 to 4");
+            }
+        }
+        
 
-        System.out.println("\n\n--------------------------Your Medical Report------------------------------\n\n");
-        System.out.println(medRec);
     }
 }
