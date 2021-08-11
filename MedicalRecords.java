@@ -26,6 +26,24 @@ Instance Methods-
     private LabTests[] fineLabTest;
     private LabTests[] needDoctorAttentionTest;
     private int Room;
+	private String PatName;
+    private int PatAge;
+
+    public void setPatName(String patName) {
+        PatName = patName;
+    }
+
+    public void setPatAge(int patAge) {
+        PatAge = patAge;
+    }
+
+    public String getPatName() {
+        return PatName;
+    }
+
+    public int getPatAge() {
+        return PatAge;
+    }
 
     public int getRoom() {
         return Room;
@@ -110,19 +128,21 @@ Instance Methods-
 	}
 
 	public String toString(){
-		String str = "Chronic Disease: \n" + chronicDisease + "\n" +
-                "PreviousDisease: \n" + previousDisease + "\n" +
+		String str = "Patient name: \n" + PatName + "\n" +
+                "\nPatient age: \n" + PatAge + "\n\n" +
+		"Chronic Disease: \n" + chronicDisease + "\n\n" +
+                "PreviousDisease: \n" + previousDisease + "\n\n" +
                 hospital + "\n" +
                 doctor + "\n" +
-                "Admitted: " + isAdmitted() + "\n";
+                "\nAdmitted: " + isAdmitted() + "\n";
         if (getRoom() != 0) {
-            str += "Room no.: " + getRoom() + "\n";
+            str += "\nRoom no.: " + getRoom() + "\n";
         }
-        str += "FineLabtest: \n";
+        str += "\nFineLabtest: \n";
         for (int i = 0; i < fineLabTest.length; i++) {
             if (fineLabTest[i] != null) str += fineLabTest[i] + "\n";
         }
-        str += "NeedDoctorAttentionLabtest: \n";
+        str += "\nNeedDoctorAttentionLabtest: \n";
         for (int i = 0; i < needDoctorAttentionTest.length; i++) {
             if (needDoctorAttentionTest[i] != null) str += needDoctorAttentionTest[i] + "\n";
         }
