@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Hospital {
     private final int ID;
@@ -72,14 +73,19 @@ public class Hospital {
         }
         int indexDep;
         while(true){
-            System.out.println("Enter the index of preferred department: ");
-            indexDep = myreader.nextInt();
-            if(indexDep>=1 && indexDep <= deps.length){
-                break;
-            }else{
-                System.out.println("\n*Invalid Input, Enter value from 1 to " + deps.length+ "\n");
+            try{
+                System.out.println("Enter the index of preferred department: ");
+                indexDep = myreader.nextInt();
+                if (indexDep >= 1 && indexDep <= deps.length) {
+                    break;
+                } else {
+                    System.out.println("\n*Invalid Input, Enter value from 1 to " + deps.length + "\n");
+                }
+            } catch (InputMismatchException i) {
+                System.out.println("\n*Invalid input choose from 1 to 10\n");
+                myreader.nextLine();
             }
-              
+
         }
         p1.selectDoctors(this.getID(), deps[indexDep - 1], DctrFile, medRec); 
         

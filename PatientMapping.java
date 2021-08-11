@@ -2,6 +2,7 @@ import java.io.*;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 
 public class PatientMapping {
@@ -139,18 +140,24 @@ public class PatientMapping {
         }
         int slOfDoc;
         while (true) {
-            System.out.println("Enter the index of the preferred doctor ");
-            slOfDoc = myreader.nextInt();
-            if (slOfDoc >= 1 && slOfDoc <= k) {
-                int indexDoc = this.slctDoctorArray(index, dep, File)[slOfDoc - 1];
-                System.out.println("The selected doctor is ");
-                System.out.println(this.DoctorArr[indexDoc]);
-                medRec.setDoctor(this.DoctorArr[indexDoc]);
-                break;
-            } else {
-                System.out.println("\n*Enter Valid input of Doctors number in list\n");
+            try {
+                System.out.println("Enter the index of the preferred doctor ");
+                slOfDoc = myreader.nextInt();
+                if (slOfDoc >= 1 && slOfDoc <= k) {
+                    int indexDoc = this.slctDoctorArray(index, dep, File)[slOfDoc - 1];
+                    System.out.println("The selected doctor is ");
+                    System.out.println(this.DoctorArr[indexDoc]);
+                    medRec.setDoctor(this.DoctorArr[indexDoc]);
+                    break;
+                } else {
+                    System.out.println("\n*Enter Valid input of Doctors number in list\n");
+                }
             }
 
+            catch (InputMismatchException i) {
+                System.out.println("\n*Invalid input choose from 1 to 10\n");
+                myreader.nextLine();
+            }
         }
 
     }
