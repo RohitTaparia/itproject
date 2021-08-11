@@ -120,10 +120,10 @@ Instance Methods-
         }
         str += "FineLabtest: \n";
         for (int i = 0; i < fineLabTest.length; i++) {
-            if (needDoctorAttentionTest[i] != null) str += fineLabTest[i] + "\n";
+            if (fineLabTest[i] != null) str += fineLabTest[i] + "\n";
         }
         str += "NeedDoctorAttentionLabtest: \n";
-        for (int i = 0; i < fineLabTest.length; i++) {
+        for (int i = 0; i < needDoctorAttentionTest.length; i++) {
             if (needDoctorAttentionTest[i] != null) str += needDoctorAttentionTest[i] + "\n";
         }
 

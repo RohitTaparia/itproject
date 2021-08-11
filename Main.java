@@ -46,9 +46,7 @@ public class Main {
             medRec.setAdmitted(false);
         }
         
-//          MedicalRecords
-        System.out.println("\n\n-------------Medical Record-----------------------");
-        System.out.println(medRec);
+
 
 
         // Labtests
@@ -58,7 +56,12 @@ public class Main {
         LabTests[] needsAttention = tests[1];
         medRec.setFineLabTest(fine);
         medRec.setNeedDoctorAttentionTest(needsAttention);
-
+    
+        //          MedicalRecords
+        System.out.println("\n\n-------------Medical Record-----------------------");
+        System.out.println(medRec);
+    
+    
         //Bill
         Bill bill = new Bill(medRec);
         bill.generateBill();
