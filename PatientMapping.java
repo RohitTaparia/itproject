@@ -155,7 +155,7 @@ public class PatientMapping {
             }
 
             catch (InputMismatchException i) {
-                System.out.println("\n*Invalid input choose from 1 to 10\n");
+                System.out.println("\n*Enter Valid input of Doctors number in list\n");
                 myreader.nextLine();
             }
         }

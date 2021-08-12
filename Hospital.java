@@ -82,7 +82,7 @@ public class Hospital {
                     System.out.println("\n*Invalid Input, Enter value from 1 to " + deps.length + "\n");
                 }
             } catch (InputMismatchException i) {
-                System.out.println("\n*Invalid input choose from 1 to 10\n");
+                System.out.println("\n*Invalid input choose from 1 "+ deps.length + "\n");
                 myreader.nextLine();
             }
 
