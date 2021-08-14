@@ -20,6 +20,25 @@ public class Main {
         // information about the selected hospital.
         // Displays the depts in that hospital and asks to select one of those.
         Scanner myreader = new Scanner(System.in);
+        
+        //        Patient
+        p1.buildPatient(PatientFile);
+        int token;
+        while (true) {
+            System.out.println("Enter the token number");
+            token = myreader.nextInt();
+            if (token <= p1.getTotalPatients() && token >= 1) {
+                break;
+            } else {
+                System.out.println("\n*Invalid input choose from 1 to " + p1.getTotalPatients() + "\n");
+            }
+        }
+        Location l1 = new Location(p1.PatientArr[token - 1].getLatitude(), p1.PatientArr[token - 1].getLongitude());
+        medRec.setPatName(p1.PatientArr[token - 1].getName());
+        medRec.setPatAge(p1.PatientArr[token - 1].getAge());
+        p1.recommend(l1, 10, HspFile);
+        
+        
         int indexHsp;
         while (true) {
             try {
