@@ -10,6 +10,7 @@ public class Main {
         PatientMapping p1 = new PatientMapping();
         String HspFile = "itproject/data/Hospitals.txt";
         String DctrFile = "itproject/data/doctor.txt";
+        String PatientFile = "itproject/data/Patients.txt";
         MedicalRecords medRec = new MedicalRecords("ABC", true, "DEF"); // Medical Record Defined
 
        
