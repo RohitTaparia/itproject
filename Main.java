@@ -12,8 +12,7 @@ public class Main {
         String DctrFile = "itproject/data/doctor.txt";
         MedicalRecords medRec = new MedicalRecords("ABC", true, "DEF"); // Medical Record Defined
 
-        Location l1 = new Location(28.6052154684654, 77.2155121525);
-        p1.recommend(l1, 10, HspFile);
+       
         
         
         // Hospital - Recommend 10 hospitals. asks to select one of these. Displays all
