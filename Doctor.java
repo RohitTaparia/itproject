@@ -44,7 +44,7 @@ public class Doctor {
 
     @Override
     public String toString() {
-        return "Details of the Doctor:-\nHospitalID: " + HospitalID + "\nName=" + Name + "\nDept=" + Dept + "\nFees=" + Fees;
+        return "Details of the Doctor:-\nHospitalID: " + HospitalID + "\nName: " + Name + "\nDept: " + Dept + "\nFees: " + Fees;
     }
     public void prescribeMed() {
         //this method needs some modifications. will discuss in meet
