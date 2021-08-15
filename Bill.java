@@ -1,5 +1,5 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
-
 
 import java.util.Scanner;
 
@@ -64,8 +64,18 @@ public class Bill {
     public String billPayMode() {
         System.out.println("\n\nChoose one of the following payment mode: ");
         System.out.println("\n 1. Card \n 2. NetBanking \n 3. Cash \n 4. Cheque \n \n Enter the number here : ");
-        Scanner scan1 = new Scanner(System.in);
-        int input = scan1.nextInt();
+
+        int input;
+        while(true){
+            try {
+            Scanner scan1 = new Scanner(System.in);
+            input = scan1.nextInt();
+            break;
+        } catch (InputMismatchException i) {
+            System.out.println("*Invalid inout choose from 1 to 4");
+        }
+        }
+
         switch (input) {
             case 1:
                 return "Card";
