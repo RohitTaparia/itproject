@@ -1,6 +1,3 @@
 # it-project
-college project group for managing  version control and coordinating  
-data folder is for text files and data only 
-logic files shall be in main folder add to main folder ie;itproject/logic.java
-use comments to specify what  a function and files do 
-happy coding  
+A Hospital Mapping and Recommendation system using basic concepts of OOPS.
+We recommend the nearest 10 hospitals depending on the location of the user and and then manage all the treatment process from the staff side.
